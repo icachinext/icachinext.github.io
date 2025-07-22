@@ -44,20 +44,3 @@ export const routes = Object.fromEntries([
   ["/zh/timeline/", { loader: () => import(/* webpackChunkName: "zh_timeline_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/zh/timeline/index.html.js"), meta: {"title":"Timeline"} }],
   ["/en/timeline/", { loader: () => import(/* webpackChunkName: "en_timeline_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/en/timeline/index.html.js"), meta: {"title":"Timeline"} }],
 ]);
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateRoutes) {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-  }
-  if (__VUE_HMR_RUNTIME__.updateRedirects) {
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ routes, redirects }) => {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  })
-}
