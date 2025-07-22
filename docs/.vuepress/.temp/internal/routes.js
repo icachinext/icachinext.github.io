@@ -25,6 +25,8 @@ export const routes = Object.fromEntries([
   ["/category/category-a/", { loader: () => import(/* webpackChunkName: "category_category-a_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/category/category-a/index.html.js"), meta: {"title":"Category Category A"} }],
   ["/category/category-b/", { loader: () => import(/* webpackChunkName: "category_category-b_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/category/category-b/index.html.js"), meta: {"title":"Category Category B"} }],
   ["/category/category-c/", { loader: () => import(/* webpackChunkName: "category_category-c_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/category/category-c/index.html.js"), meta: {"title":"Category Category C"} }],
+  ["/zh/category/", { loader: () => import(/* webpackChunkName: "zh_category_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/zh/category/index.html.js"), meta: {"title":"Categories"} }],
+  ["/en/category/", { loader: () => import(/* webpackChunkName: "en_category_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/en/category/index.html.js"), meta: {"title":"Categories"} }],
   ["/tag/", { loader: () => import(/* webpackChunkName: "tag_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/tag/index.html.js"), meta: {"title":"Tags"} }],
   ["/tag/wwi/", { loader: () => import(/* webpackChunkName: "tag_wwi_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/tag/wwi/index.html.js"), meta: {"title":"Tag WWI"} }],
   ["/tag/wwii/", { loader: () => import(/* webpackChunkName: "tag_wwii_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/tag/wwii/index.html.js"), meta: {"title":"Tag WWII"} }],
@@ -33,8 +35,14 @@ export const routes = Object.fromEntries([
   ["/tag/tag-c/", { loader: () => import(/* webpackChunkName: "tag_tag-c_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/tag/tag-c/index.html.js"), meta: {"title":"Tag tag C"} }],
   ["/tag/tag-d/", { loader: () => import(/* webpackChunkName: "tag_tag-d_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/tag/tag-d/index.html.js"), meta: {"title":"Tag tag D"} }],
   ["/tag/tag-e/", { loader: () => import(/* webpackChunkName: "tag_tag-e_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/tag/tag-e/index.html.js"), meta: {"title":"Tag tag E"} }],
+  ["/zh/tag/", { loader: () => import(/* webpackChunkName: "zh_tag_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/zh/tag/index.html.js"), meta: {"title":"Tags"} }],
+  ["/en/tag/", { loader: () => import(/* webpackChunkName: "en_tag_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/en/tag/index.html.js"), meta: {"title":"Tags"} }],
   ["/article/", { loader: () => import(/* webpackChunkName: "article_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/article/index.html.js"), meta: {"title":"Articles"} }],
+  ["/zh/article/", { loader: () => import(/* webpackChunkName: "zh_article_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/zh/article/index.html.js"), meta: {"title":"Articles"} }],
+  ["/en/article/", { loader: () => import(/* webpackChunkName: "en_article_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/en/article/index.html.js"), meta: {"title":"Articles"} }],
   ["/timeline/", { loader: () => import(/* webpackChunkName: "timeline_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/timeline/index.html.js"), meta: {"title":"Timeline"} }],
+  ["/zh/timeline/", { loader: () => import(/* webpackChunkName: "zh_timeline_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/zh/timeline/index.html.js"), meta: {"title":"Timeline"} }],
+  ["/en/timeline/", { loader: () => import(/* webpackChunkName: "en_timeline_index.html" */"/Users/chenwang/Dev/ICACHI/icachinext.github.io/docs/.vuepress/.temp/pages/en/timeline/index.html.js"), meta: {"title":"Timeline"} }],
 ]);
 
 if (import.meta.webpackHot) {

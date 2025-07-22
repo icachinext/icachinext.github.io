@@ -4,9 +4,9 @@ import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
-  lang: 'en-US',
+  lang: 'zh-CN',
 
-  title: 'VuePress',
+  title: '世界华人华侨人机交互协会',
   description: 'My first VuePress Site',
 
   theme: defaultTheme({
@@ -14,6 +14,22 @@ export default defineUserConfig({
 
     navbar: [
       '/',
+      {
+        text: '关于我们',
+        link: '/about/',
+      },
+      {
+        text: '协会章程',
+        link: '/la/',
+      },
+      {
+        text: 'Tag',
+        link: '/tag/',
+      },
+      {
+        text: 'Timeline',
+        link: '/timeline/',
+      },
       {
         text: 'Article',
         link: '/article/',
@@ -32,6 +48,19 @@ export default defineUserConfig({
       },
     ],
   }),
+
+  locales: {
+    '/zh/': {
+      lang: 'zh-CN',
+      title: '世界华人华侨人机交互协会',
+      description: '中文描述'
+    },
+    '/en/': {
+      lang: 'en-US',
+      title: 'ICACHI',
+      description: 'English Description'
+    }
+  },
 
   plugins: [
     blogPlugin({
