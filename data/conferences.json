@@ -1,0 +1,16 @@
+[
+    {
+        "year": 2024,
+        "title": "Chinese CHI 2024",
+        "location": "Guangzhou, China",
+        "link": "https://chinesexchi.github.io/2024/",
+        "image": "https://images.unsplash.com/photo-1565099824688-e93eb20fe622?q=80&w=2671&auto=format&fit=crop"
+    },
+    {
+        "year": 2023,
+        "title": "Chinese CHI 2023",
+        "location": "Bali, Indonesia",
+        "link": "https://chinesexchi.github.io/2023/",
+        "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2676&auto=format&fit=crop"
+    }
+]

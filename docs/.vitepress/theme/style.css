@@ -1,0 +1,93 @@
+/* Global Font Stack */
+:root {
+  --vp-font-family-base: "Inter", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Brand Colors - Premium Blue Palette */
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #1d4ed8;
+  --vp-c-brand-3: #1e40af;
+  --vp-c-brand-soft: rgba(37, 99, 235, 0.1);
+
+  /* Text Colors */
+  --vp-c-text-1: #1f2937;
+  --vp-c-text-2: #4b5563;
+
+  /* Backgrounds */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f9fafb;
+}
+
+/* Dark Mode Adjustments */
+.dark {
+  --vp-c-brand-1: #3b82f6;
+  --vp-c-brand-2: #60a5fa;
+  --vp-c-brand-3: #93c5fd;
+  --vp-c-bg: #111827;
+  --vp-c-bg-alt: #1f2937;
+  --vp-c-text-1: #f3f4f6;
+  --vp-c-text-2: #d1d5db;
+}
+
+/* Premium Component Styling */
+.home-hero-slide {
+  margin-bottom: 4rem;
+}
+
+/* Smooth Transitions */
+a,
+button,
+.vp-doc img {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism Navbar */
+.VPNav {
+  backdrop-filter: blur(12px) saturate(180%) !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .VPNav {
+  background-color: rgba(17, 24, 39, 0.7) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Card Effects */
+.card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.02em;
+}
+
+.vp-doc h1 {
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Button Gradients */
+.action-button {
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.action-button:hover {
+  box-shadow: 0 4px 12px var(--vp-c-brand-soft);
+}

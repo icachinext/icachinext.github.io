@@ -1,0 +1,7 @@
+---
+title: News
+---
+
+# News
+
+<NewsList />

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Prof. John Doe",
+        "role": "Chair",
+        "org": "University of HCI",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=John"
+    },
+    {
+        "name": "Prof. Jane Smith",
+        "role": "Vice Chair",
+        "org": "Tech Institute",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Jane"
+    },
+    {
+        "name": "Dr. Alice Wang",
+        "role": "Secretary",
+        "org": "Future University",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alice"
+    },
+    {
+        "name": "Dr. Bob Chen",
+        "role": "Treasurer",
+        "org": "Innovation Lab",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Bob"
+    }
+]
