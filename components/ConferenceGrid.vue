@@ -13,7 +13,7 @@ import conferenceData from '../data/conferences.json'
         <div class="conf-header">
           <span class="conf-year">{{ conf.year }}</span>
         </div>
-        <h3><a :href="conf.link" target="_blank">{{ conf.title }}</a></h3>
+        <h5><a :href="conf.link" target="_blank">{{ conf.title }}</a></h5>
         <p class="conf-location">📍 {{ conf.location }}</p>
       </div>
     </div>
@@ -62,7 +62,7 @@ import conferenceData from '../data/conferences.json'
   font-weight: bold;
 }
 
-.conf-content h3 {
+.conf-content h5 {
   margin: 1rem 0 0.5rem 0;
 }
 

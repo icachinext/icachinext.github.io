@@ -1,61 +1,86 @@
 <script setup>
-import { data as news } from '../docs/news.data'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { data as newsData } from '../docs/news.data'
+import conferenceData from '../data/conferences.json'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 const currentSlide = ref(0)
 const timer = ref(null)
 
+// Prepare Data: 1st is Latest Conference, 2-4 are Top 3 News
+const slides = computed(() => {
+  const latestConf = conferenceData[0] || null
+  const topNews = newsData.slice(0, 3).map(n => ({
+    title: n.title,
+    subtitle: n.date ? new Date(n.date).toLocaleDateString() : '',
+    image: n.cover,
+    link: n.url,
+    type: 'News'
+  }))
+
+  const result = []
+  if (latestConf) {
+    result.push({
+      title: latestConf.title,
+      subtitle: `${latestConf.location} | ${latestConf.year}`,
+      image: latestConf.image,
+      link: latestConf.link,
+      type: 'Conference'
+    })
+  }
+  
+  return [...result, ...topNews]
+})
+
 const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % news.length
+  if (slides.value.length === 0) return
+  currentSlide.value = (currentSlide.value + 1) % slides.value.length
 }
 
 const prevSlide = () => {
-  currentSlide.value = (currentSlide.value - 1 + news.length) % news.length
+  if (slides.value.length === 0) return
+  currentSlide.value = (currentSlide.value - 1 + slides.value.length) % slides.value.length
 }
 
 onMounted(() => {
-  timer.value = setInterval(nextSlide, 5000)
+  // Auto-play
+  timer.value = setInterval(nextSlide, 6000)
 })
 
 onUnmounted(() => {
-  clearInterval(timer.value)
+  if (timer.value) clearInterval(timer.value)
 })
 </script>
 
 <template>
-  <div class="hero-container">
-    <div class="hero-content">
-      <h1 class="hero-title">ICACHI</h1>
-      <p class="hero-subtitle">世界华人华侨人机交互协会</p>
-      <p class="hero-tagline">International Chinese Association of Computer Human Interaction</p>
-      <div class="hero-actions">
-        <a href="/about" class="hero-btn primary">关于我们</a>
-        <a href="/bylaws" class="hero-btn secondary">协会章程</a>
-      </div>
-    </div>
-    
+  <div class="hero-wrapper" v-if="slides.length > 0">
     <div class="hero-slider">
       <div 
-        v-for="(item, index) in news.slice(0, 4)" 
-        :key="item.url"
+        v-for="(item, index) in slides" 
+        :key="index"
         class="slide"
         :class="{ active: index === currentSlide }"
-        :style="{ backgroundImage: `url(${item.cover || '/default-cover.jpg'})` }"
+        :style="{ backgroundImage: `url(${item.image || '/default-cover.jpg'})` }"
       >
         <div class="slide-overlay">
-          <h3><a :href="item.url">{{ item.title }}</a></h3>
-          <p>{{ item.date }}</p>
+          <div class="slide-content">
+            <span class="slide-tag">{{ item.type }}</span>
+            <h2 class="slide-title">
+              <a :href="item.link">{{ item.title }}</a>
+            </h2>
+            <p class="slide-subtitle">{{ item.subtitle }}</p>
+            <a :href="item.link" class="slide-btn">Read More</a>
+          </div>
         </div>
       </div>
-      
+
       <div class="slider-controls">
-        <button @click="prevSlide" class="control-btn">❮</button>
-        <button @click="nextSlide" class="control-btn">❯</button>
+        <button @click="prevSlide" class="control-btn left">❮</button>
+        <button @click="nextSlide" class="control-btn right">❯</button>
       </div>
-      
+
       <div class="slider-dots">
         <span 
-          v-for="(_, index) in news.slice(0, 4)" 
+          v-for="(_, index) in slides" 
           :key="index"
           class="dot"
           :class="{ active: index === currentSlide }"
@@ -67,77 +92,25 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.hero-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 12px;
-  margin: 2rem 0;
-  align-items: center;
-}
-
-.hero-content {
-  padding-right: 2rem;
-}
-
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  background: -webkit-linear-gradient(315deg, #3451b2 25%, #3a5ccc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0.5rem;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  color: #333;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.hero-tagline {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-}
-
-.hero-btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.hero-btn.primary {
-  background-color: var(--vp-c-brand-1);
-  color: white;
-}
-
-.hero-btn.secondary {
-  border: 2px solid var(--vp-c-brand-1);
-  color: var(--vp-c-brand-1);
-}
-
-.hero-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.hero-wrapper {
+  /* Full viewport width and comfortable height */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -40px; /* Counteract default padding if any, adjustment for VitePress default layout */
 }
 
 .hero-slider {
   position: relative;
-  height: 400px;
-  border-radius: 12px;
+  width: 100%;
+  height: 85vh; /* Occupy most of the screen */
+  max-height: 800px;
+  min-height: 500px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  background-color: #000;
 }
 
 .slide {
@@ -149,32 +122,97 @@ onUnmounted(() => {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 1s ease-in-out, transform 6s ease;
+  transform: scale(1.05); /* Zoom effect start */
 }
 
 .slide.active {
   opacity: 1;
+  transform: scale(1); /* Zoom effect end */
+  z-index: 1;
 }
 
 .slide-overlay {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); /* Darken entire image slightly */
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.3) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide-content {
+  max-width: 800px;
   padding: 2rem;
   color: white;
+  animation: fadeUp 1s ease-out 0.3s backwards;
 }
 
-.slide-overlay h3 {
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-tag {
+  display: inline-block;
+  background-color: var(--vp-c-brand-1);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slide-title {
   margin: 0;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.slide-overlay a {
+.slide-title a {
   color: white;
   text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.slide-title a:hover {
+  opacity: 0.8;
+}
+
+.slide-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.slide-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: white;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.slide-btn:hover {
+  background-color: var(--vp-c-brand-1);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .slider-controls {
@@ -184,54 +222,67 @@ onUnmounted(() => {
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
-  padding: 0 1rem;
+  padding: 0 2rem;
+  z-index: 10;
   pointer-events: none;
 }
 
 .control-btn {
   pointer-events: auto;
-  background: rgba(255,255,255,0.3);
-  border: none;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.2);
   color: white;
   font-size: 2rem;
   cursor: pointer;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .control-btn:hover {
-  background: rgba(255,255,255,0.6);
+  background: white;
+  color: black;
 }
 
 .slider-dots {
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 0.5rem;
+  gap: 0.8rem;
+  z-index: 10;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.5);
+  border: 2px solid white;
+  background: transparent;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .dot.active {
   background: white;
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
-  .hero-container {
-    grid-template-columns: 1fr;
+  .slide-title {
+    font-size: 2rem;
+  }
+  .slide-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-slider {
+    height: 60vh;
   }
 }
 </style>

@@ -1,7 +1,6 @@
 ---
 title: 新闻
+layout: home
 ---
-
-# 新闻动态
 
 <NewsList />

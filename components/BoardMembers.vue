@@ -7,7 +7,7 @@ import boardData from '../data/board.json'
     <div v-for="member in boardData" :key="member.name" class="member-card">
       <img :src="member.avatar" :alt="member.name" class="member-avatar">
       <div class="member-info">
-        <h3>{{ member.name }}</h3>
+        <h4>{{ member.name }}</h4>
         <p class="role">{{ member.role }}</p>
         <p class="org">{{ member.org }}</p>
       </div>
@@ -18,7 +18,7 @@ import boardData from '../data/board.json'
 <style scoped>
 .board-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
@@ -44,10 +44,12 @@ import boardData from '../data/board.json'
   border-radius: 50%;
   margin-bottom: 1rem;
   object-fit: cover;
-  border: 3px solid var(--vp-c-brand-1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.member-info h3 {
+.member-info h4 {
   margin: 0.5rem 0;
   color: var(--vp-c-text-1);
 }

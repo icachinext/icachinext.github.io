@@ -1,16 +1,93 @@
 [
     {
+        "year": 2025,
+        "title": "International Conference on Human-Engaged Computing 2025",
+        "location": "新加坡管理大学, 新加坡",
+        "link": "https://ichec.icachi.org",
+        "image": "/images/conf/ichec25t.png"
+    },
+    {
         "year": 2024,
-        "title": "Chinese CHI 2024",
-        "location": "Guangzhou, China",
-        "link": "https://chinesexchi.github.io/2024/",
-        "image": "https://images.unsplash.com/photo-1565099824688-e93eb20fe622?q=80&w=2671&auto=format&fit=crop"
+        "title": "International Symposium of Chinese CHI 2024",
+        "location": "南方科技大学, 深圳, 中国",
+        "link": "https://ichec.icachi.org/24/",
+        "image": "/images/conf/chchi24t.png"
     },
     {
         "year": 2023,
-        "title": "Chinese CHI 2023",
-        "location": "Bali, Indonesia",
-        "link": "https://chinesexchi.github.io/2023/",
-        "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2676&auto=format&fit=crop"
+        "title": "International Symposium of Chinese CHI 2023",
+        "location": "清华大学东南亚中心, 巴厘岛, 印度尼西亚",
+        "link": "https://ichec.icachi.org/23/",
+        "image": "/images/conf/chchi23t.png"
+    },
+    {
+        "year": 2022,
+        "title": "International Symposium of Chinese CHI 2022",
+        "location": "广东工业大学, 广州, 中国",
+        "link": "https://chchi2022.icachi.org",
+        "image": "/images/conf/chchi22t.png"
+    },
+    {
+        "year": 2021,
+        "title": "International Symposium of Chinese CHI 2021",
+        "location": "线上",
+        "link": "https://chchi2021.icachi.org",
+        "image": "/images/conf/chchi21t.png"
+    },
+    {
+        "year": 2020,
+        "title": "International Symposium of Chinese CHI 2020",
+        "location": "线上",
+        "link": "https://chchi2020.xrenlab.com",
+        "image": "/images/conf/chchi20.png"
+    },
+    {
+        "year": 2019,
+        "title": "International Symposium of Chinese CHI 2019",
+        "location": "厦门大学, 厦门, 中国",
+        "link": "https://web.archive.org/web/20191015123102/http://chchi2019.icachi.org/",
+        "image": "/images/conf/chchi19.jpg"
+    },
+    {
+        "year": 2018,
+        "title": "International Symposium of Chinese CHI 2018",
+        "location": "蒙特利尔, 加拿大",
+        "link": "https://web.archive.org/web/20180626030333/chchi2018.icachi.org/",
+        "image": "/images/conf/chchi18.png"
+    },
+    {
+        "year": 2017,
+        "title": "International Symposium of Chinese CHI 2017",
+        "location": "广东工业大学, 广州, 中国",
+        "link": "https://web.archive.org/web/20171117162527/http://chchi2017.icachi.org/",
+        "image": "/images/conf/chchi17.png"
+    },
+    {
+        "year": 2016,
+        "title": "International Symposium of Chinese CHI 2016",
+        "location": "圣何塞, 加州, 美国",
+        "link": "https://web.archive.org/web/20180131194049/chchi2016.icachi.org/",
+        "image": "/images/conf/chchi16.png"
+    },
+    {
+        "year": 2015,
+        "title": "International Symposium of Chinese CHI 2015",
+        "location": "首尔, 韩国",
+        "link": "https://web.archive.org/web/20181118034341/chchi2015.icachi.org/",
+        "image": "/images/conf/chchi15.png"
+    },
+    {
+        "year": 2014,
+        "title": "International Symposium of Chinese CHI 2014",
+        "location": "多伦多, 加拿大",
+        "link": "https://web.archive.org/web/20180319210157/chchi2014.icachi.org/",
+        "image": "/images/conf/chchi14.png"
+    },
+    {
+        "year": 2013,
+        "title": "International Symposium of Chinese CHI 2013",
+        "location": "巴黎, 法国",
+        "link": "https://web.archive.org/web/20140316002950/http://chchi2013.icachi.org/",
+        "image": "/images/conf/chchi13.png"
     }
 ]

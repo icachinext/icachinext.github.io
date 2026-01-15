@@ -41,7 +41,7 @@ const nextPage = () => {
           <div class="card-content">
             <span class="card-date">{{ item.date ? new Date(item.date).toLocaleDateString() : '' }}</span>
             <h3 class="card-title">{{ item.title }}</h3>
-            <p v-if="item.excerpt" class="card-excerpt" v-html="item.excerpt"></p>
+            <!-- <p v-if="item.excerpt" class="card-excerpt" v-html="item.excerpt"></p> -->
           </div>
         </a>
       </div>
