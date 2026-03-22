@@ -193,7 +193,7 @@ html {
   margin: 0 !important;
 }
 
-.home-custom-layout .container {
+.home-custom-layout .VPContent .container {
   max-width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -202,4 +202,21 @@ html {
 /* Fix for HeroSlide negative margins */
 .home-custom-layout .VPContent {
   padding: 0 !important;
+}
+
+/* Make Bylaws (sidebar) Navbar consistent with News */
+.VPNavBar.has-sidebar .title {
+  width: auto !important;
+  border-bottom: none !important;
+  background-color: transparent !important;
+}
+
+.VPNavBar.has-sidebar .divider {
+  display: none !important;
+}
+
+@media (min-width: 960px) {
+  .VPNavBar.has-sidebar .content-body {
+    background-color: transparent !important;
+  }
 }
