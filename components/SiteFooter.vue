@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useSiteData } from './useSiteData'
 
 const { site } = useSiteData()
@@ -8,6 +8,20 @@ const footer = computed(() => site.value.footer)
 const copyright = computed(() =>
   footer.value.copyright.replace('{{year}}', String(new Date().getFullYear()))
 )
+
+// Back-to-top
+const showBackTop = ref(false)
+
+function onScroll() {
+  showBackTop.value = window.scrollY > 400
+}
+
+function scrollTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
+onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
 
 <template>
@@ -29,10 +43,6 @@ const copyright = computed(() =>
           </ul>
         </div>
 
-        <div class="ic-footer-col ic-footer-wechat">
-          <h4>{{ footer.wechat.label }}</h4>
-          <img :src="footer.wechat.qr" alt="WeChat QR" />
-        </div>
       </div>
     </div>
 
@@ -40,14 +50,23 @@ const copyright = computed(() =>
       <span>{{ copyright }}</span>
     </div>
   </footer>
+
+  <!-- Back to top -->
+  <button
+    class="ic-back-to-top"
+    :class="{ visible: showBackTop }"
+    aria-label="回到顶部"
+    @click="scrollTop"
+  >
+    ↑
+  </button>
 </template>
 
 <style scoped>
 .ic-footer {
-  border-top: 1px solid var(--ic-border);
-  background: var(--vp-c-bg);
+  background: #0a0a0a;
   padding: 80px 0 32px;
-  margin-top: 120px;
+  margin-top: 0;
 }
 
 .ic-footer-inner {
@@ -62,11 +81,13 @@ const copyright = computed(() =>
   width: auto;
   display: block;
   margin-bottom: 16px;
+  /* Invert logo for dark bg */
+  filter: brightness(0) invert(1);
 }
 
 .ic-footer-tagline {
   font-size: 14px;
-  color: var(--vp-c-text-2);
+  color: #a3a3a3;
   line-height: 1.6;
   max-width: 320px;
   margin: 0;
@@ -74,8 +95,8 @@ const copyright = computed(() =>
 
 .ic-footer-cols {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
 .ic-footer-col h4 {
@@ -83,7 +104,7 @@ const copyright = computed(() =>
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--vp-c-text-1);
+  color: #fafafa;
   margin: 0 0 16px;
 }
 
@@ -98,34 +119,29 @@ const copyright = computed(() =>
 
 .ic-footer-col a {
   font-size: 14px;
-  color: var(--vp-c-text-2);
+  color: #a3a3a3;
   text-decoration: none;
-  transition: color var(--ic-transition);
+  transition: color 200ms;
 }
 
 .ic-footer-col a:hover {
-  color: var(--vp-c-text-1);
+  color: #fafafa;
 }
 
+/* Plain text items (address, contact) — same color as links */
 .ic-footer-text {
   font-size: 13px;
-  color: var(--vp-c-text-3);
+  color: #a3a3a3;
   line-height: 1.5;
 }
 
-.ic-footer-wechat img {
-  width: 110px;
-  height: 110px;
-  border: 1px solid var(--ic-border);
-  border-radius: 4px;
-}
 
 .ic-footer-bottom {
   margin-top: 64px;
   padding-top: 24px;
-  border-top: 1px solid var(--ic-border);
+  border-top: 1px solid #262626;
   font-size: 13px;
-  color: var(--vp-c-text-3);
+  color: #525252;
 }
 
 @media (max-width: 960px) {

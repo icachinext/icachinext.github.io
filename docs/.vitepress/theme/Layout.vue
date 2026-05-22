@@ -2,6 +2,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { useSiteData } from '../../../components/useSiteData'
 import SiteFooter from '../../../components/SiteFooter.vue'
+import WeChatFloat from '../../../components/WeChatFloat.vue'
 
 const { Layout } = DefaultTheme
 const { site } = useSiteData()
@@ -21,6 +22,7 @@ const { site } = useSiteData()
 
     <template #layout-bottom>
       <SiteFooter />
+      <WeChatFloat />
     </template>
   </Layout>
 </template>

@@ -4,6 +4,5 @@ pageClass: home
 ---
 
 <HomeHero />
-<HomeAbout />
 <HomeConferences />
 <HomeNewsAndResources />

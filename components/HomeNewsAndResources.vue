@@ -7,7 +7,8 @@ const { site, resourceList } = useSiteData()
 const news = computed(() => site.value.news)
 const resourcesCopy = computed(() => site.value.resources)
 
-const top = computed(() => allNews.slice(0, 6))
+const top = computed(() => allNews.slice(0, 5))
+const topResources = computed(() => resourceList.value.slice(0, 3))
 
 function fmt(date) {
   if (!date) return ''
@@ -20,9 +21,9 @@ function fmt(date) {
 <template>
   <section class="nr ic-section">
     <div class="ic-container nr-grid">
+      <!-- News: 2/3 -->
       <div class="news-col">
         <header class="col-head">
-          <span class="ic-eyebrow">{{ news.eyebrow }}</span>
           <h2>{{ news.title }}</h2>
         </header>
 
@@ -38,20 +39,20 @@ function fmt(date) {
               </div>
             </a>
           </li>
-          <li v-if="!top.length" class="empty">No news yet.</li>
+          <li v-if="!top.length" class="empty">暂无新闻。</li>
         </ul>
 
         <a class="ic-link-arrow" :href="news.viewAll.link">{{ news.viewAll.text }}</a>
       </div>
 
+      <!-- Resources: 1/3 -->
       <aside class="res-col">
         <header class="col-head">
-          <span class="ic-eyebrow">{{ resourcesCopy.eyebrow }}</span>
           <h2>{{ resourcesCopy.title }}</h2>
         </header>
 
         <ul class="res-list">
-          <li v-for="r in resourceList" :key="r.title" class="res-item ic-card">
+          <li v-for="r in topResources" :key="r.title" class="res-item ic-card">
             <a :href="r.link" target="_blank" rel="noopener">
               <div class="res-meta">
                 <span class="res-type">{{ r.type }}</span>
@@ -86,11 +87,11 @@ function fmt(date) {
 }
 
 .col-head {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .col-head h2 {
-  font-size: clamp(24px, 2.6vw, 34px);
+  font-size: clamp(22px, 2.4vw, 32px);
   font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0;

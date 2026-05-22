@@ -5,6 +5,10 @@ html {
   overflow-y: scroll;
 }
 
+/* ── Disable dark mode completely ─────────────────────── */
+html.dark { color-scheme: light; }
+.VPSwitchAppearance { display: none !important; }
+
 /* Kill VitePress gradient on H1 */
 .vp-doc h1 {
   background: none !important;
@@ -21,10 +25,6 @@ html {
   border-bottom: 1px solid var(--ic-border) !important;
 }
 
-.dark .VPNav {
-  background-color: var(--vp-c-bg) !important;
-}
-
 .VPNavBar.has-sidebar .title {
   background: transparent !important;
   border-bottom: none !important;
@@ -37,7 +37,7 @@ html {
 .VPNavBar .container {
   max-width: var(--ic-container) !important;
   margin: 0 auto !important;
-  padding: 0 32px !important;
+  padding: 0 40px !important;
   width: 100% !important;
 }
 
@@ -55,6 +55,34 @@ html {
 .VPNavBarTitle .VPImage {
   height: 32px !important;
   width: auto !important;
+}
+
+/* ── Navbar item ordering ─────────────────────────────── */
+/* Desired: [menu] [member-login] [search icon] [locale]  */
+.VPNavBar .content-body               { align-items: center; }
+.VPNavBar .content-body .menu         { order: 1; }
+.VPNavBar .content-body .ic-member-login { order: 2; }
+.VPNavBar .content-body .search       { order: 3; }
+.VPNavBar .content-body .translations { order: 4; }
+
+/* ── Search: magnifying glass only, no background/border ── */
+.VPNavBarSearch .DocSearch-Button,
+.VPNavBarSearch .vp-local-search-button {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 8px !important;
+  width: auto !important;
+  min-width: auto !important;
+}
+
+/* Hide text label & keyboard shortcut */
+.VPNavBarSearch .DocSearch-Button-Placeholder,
+.VPNavBarSearch .vp-local-search-button span:not([class*="vpi"]):not([class*="icon"]),
+.VPNavBarSearch kbd,
+.search-keyboard-shortcuts,
+.vp-local-search-button .meta {
+  display: none !important;
 }
 
 /* Member login button (injected via Layout slot) */
@@ -79,9 +107,7 @@ html {
 }
 
 @media (max-width: 768px) {
-  .ic-member-login {
-    display: none;
-  }
+  .ic-member-login { display: none; }
 }
 
 /* Home page — full bleed (no doc container) */
@@ -96,11 +122,47 @@ html {
   margin: 0 !important;
 }
 
-/* Default doc layout: keep generous spacing */
+/* Default doc layout */
 .vp-doc h1 { margin-top: 0; margin-bottom: 24px; }
 .vp-doc h2 { margin-top: 56px; padding-top: 0; border-top: none; }
 
 /* Hide default footer (we render our own SiteFooter) */
 .VPFooter {
   display: none !important;
+}
+
+/* ── Back-to-top button ───────────────────────────────── */
+.ic-back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--vp-c-text-1);
+  color: var(--vp-c-bg);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease, transform 250ms ease;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.ic-back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ic-back-to-top:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .ic-back-to-top { bottom: 20px; right: 20px; }
 }

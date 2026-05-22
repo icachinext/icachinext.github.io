@@ -6,6 +6,7 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/images/favicon.ico' }]],
 
   lang: 'zh-CN',
+  appearance: false,
 
   locales: {
     root: {
@@ -14,19 +15,15 @@ export default defineConfig({
       title: 'ICACHI',
       description: '世界华人华侨人机交互协会',
       themeConfig: {
-        logo: '/images/icachi-text.svg',
+        logo: '/images/icachi.svg',
         nav: [
           { text: '主页', link: '/' },
-          { text: '关于我们', link: '/about' },
+          { text: '关于', link: '/about' },
           { text: '会议', link: '/conference' },
           { text: '新闻', link: '/news/' },
-          { text: '资源', link: '/resource' },
-          { text: '协会章程', link: '/bylaws' }
+          { text: '资源', link: '/resource' }
         ],
-        outline: { label: '本页内容' },
-        sidebar: {
-          '/bylaws': [{ text: '协会章程', items: [] }]
-        }
+        outline: { label: '本页内容' }
       }
     },
     en: {
@@ -42,12 +39,8 @@ export default defineConfig({
           { text: 'About', link: '/en/about' },
           { text: 'Conference', link: '/en/conference' },
           { text: 'News', link: '/en/news/' },
-          { text: 'Resources', link: '/en/resource' },
-          { text: 'ByLaws', link: '/en/bylaws' }
-        ],
-        sidebar: {
-          '/en/bylaws': [{ text: 'ByLaws', items: [] }]
-        }
+          { text: 'Resources', link: '/en/resource' }
+        ]
       }
     }
   },

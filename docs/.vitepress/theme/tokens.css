@@ -33,7 +33,7 @@
   --ic-border: #ececec;
   --ic-border-strong: #0a0a0a;
   --ic-section-py: clamp(80px, 12vw, 160px);
-  --ic-container: 1200px;
+  --ic-container: 1440px;
   --ic-radius: 4px;
   --ic-transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
