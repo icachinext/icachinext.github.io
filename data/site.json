@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "eyebrow": "ICACHI · 自 2012",
+    "title": "连接全球华人 HCI 学者",
+    "subtitle": "世界华人华侨人机交互协会致力于推动跨文化、跨地域的人机交互研究与交流，连接全球华人学者、设计师与产业实践者。",
+    "primaryCta": { "text": "了解我们", "link": "/about" },
+    "secondaryCta": { "text": "查看会议", "link": "/conference" }
+  },
+  "about": {
+    "eyebrow": "关于我们",
+    "title": "推动人本计算的全球华人社区",
+    "summary": "世界华人华侨人机交互协会（ICACHI）于 2012 年 5 月 10 日在美国 Austin 的 ACM CHI 国际会议期间成立。理事会由活跃在世界各地的海外华人华侨 HCI 研究者组成，致力于搭建学术、产业与教育之间的桥梁。",
+    "more": { "text": "了解更多", "link": "/about" }
+  },
+  "conferences": {
+    "eyebrow": "协会会议",
+    "title": "历届 ICACHI 会议",
+    "subtitle": "自 2013 年起，协会每年在全球轮值城市举办年度学术会议，至今已走过十二届。",
+    "viewAll": { "text": "查看全部会议", "link": "/conference" }
+  },
+  "news": {
+    "eyebrow": "最新动态",
+    "title": "新闻",
+    "viewAll": { "text": "查看全部新闻", "link": "/news/" }
+  },
+  "resources": {
+    "eyebrow": "资源",
+    "title": "资源下载",
+    "viewAll": { "text": "全部资源", "link": "/resource" }
+  },
+  "memberLogin": {
+    "text": "会员登录",
+    "link": "#"
+  },
+  "footer": {
+    "tagline": "International Chinese Association of Computer Human Interaction",
+    "columns": [
+      {
+        "heading": "协会",
+        "links": [
+          { "text": "关于我们", "link": "/about" },
+          { "text": "协会章程", "link": "/bylaws" },
+          { "text": "理事会成员", "link": "/about#理事会成员" }
+        ]
+      },
+      {
+        "heading": "内容",
+        "links": [
+          { "text": "新闻", "link": "/news/" },
+          { "text": "会议", "link": "/conference" },
+          { "text": "资源", "link": "/resource" }
+        ]
+      },
+      {
+        "heading": "联系",
+        "links": [
+          { "text": "office@icachi.org", "link": "mailto:office@icachi.org" }
+        ],
+        "text": [
+          "协会联系人：付志勇",
+          "注册地址：849 Laurelwood Dr, Waterloo, ON, Canada"
+        ]
+      }
+    ],
+    "wechat": {
+      "label": "微信公众号",
+      "qr": "/images/qr.jpg"
+    },
+    "copyright": "© 2012–{{year}} ICACHI. All rights reserved."
+  }
+}

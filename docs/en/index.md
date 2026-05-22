@@ -1,6 +1,9 @@
 ---
-layout: home
-pageClass: home-custom-layout
+layout: page
+pageClass: home
 ---
 
-<HeroSlide />
+<HomeHero />
+<HomeAbout />
+<HomeConferences />
+<HomeNewsAndResources />

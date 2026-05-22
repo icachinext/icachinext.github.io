@@ -1,88 +1,90 @@
 <script setup>
 import conferenceData from '../data/conferences.json'
+
+const sorted = [...conferenceData].sort((a, b) => b.year - a.year)
 </script>
 
 <template>
-  <div class="conf-grid">
-    <div v-for="conf in conferenceData" :key="conf.year" class="conf-card">
-      <div 
-        class="conf-image"
-        :style="{ backgroundImage: `url(${conf.image || '/default-conf.jpg'})` }"
-      ></div>
-      <div class="conf-content">
-        <div class="conf-header">
-          <span class="conf-year">{{ conf.year }}</span>
-        </div>
-        <h5><a :href="conf.link" target="_blank">{{ conf.title }}</a></h5>
-        <p class="conf-location">📍 {{ conf.location }}</p>
+  <div class="conf-list">
+    <a
+      v-for="c in sorted"
+      :key="c.year"
+      :href="c.link"
+      target="_blank"
+      rel="noopener"
+      class="row"
+    >
+      <span class="year">{{ c.year }}</span>
+      <div class="body">
+        <h3>{{ c.title }}</h3>
+        <p class="location">{{ c.location }}</p>
       </div>
-    </div>
+      <div
+        class="thumb"
+        :style="{ backgroundImage: `url(${c.image})` }"
+      ></div>
+    </a>
   </div>
 </template>
 
 <style scoped>
-.conf-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem 0;
-}
-
-.conf-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+.conf-list {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid var(--ic-border);
+  padding: 24px 0;
 }
 
-.conf-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+.row {
+  display: grid;
+  grid-template-columns: 100px 1fr 160px;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--ic-border);
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+  transition: opacity var(--ic-transition);
 }
 
-.conf-image {
-  height: 200px;
+.row:hover { opacity: 0.7; }
+
+.year {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.body h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  line-height: 1.4;
+}
+
+.location {
+  margin: 0;
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+}
+
+.thumb {
+  aspect-ratio: 16 / 10;
   background-size: cover;
   background-position: center;
-}
-
-.conf-content {
-  padding: 1.5rem;
-}
-
-.conf-year {
-  background: var(--vp-c-brand-1);
-  color: white;
-  padding: 0.2rem 0.6rem;
+  background-color: var(--vp-c-bg-soft);
   border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: bold;
 }
 
-.conf-content h5 {
-  margin: 1rem 0 0.5rem 0;
-}
-
-.conf-content a {
-  text-decoration: none;
-  color: var(--vp-c-text-1);
-}
-
-.conf-content a:hover {
-  color: var(--vp-c-brand-1);
-}
-
-.conf-location {
-  color: var(--vp-c-text-2);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .conf-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 64px 1fr;
+    gap: 16px;
   }
+  .thumb { display: none; }
+  .year { font-size: 18px; }
 }
 </style>

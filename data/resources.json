@@ -1,0 +1,42 @@
+{
+  "zh": [
+    {
+      "title": "ICACHI Logo（矢量图）",
+      "description": "协会标志 SVG 矢量文件",
+      "type": "SVG",
+      "link": "/images/icachi.svg"
+    },
+    {
+      "title": "ICACHI 宣传册",
+      "description": "协会介绍与近年活动汇编",
+      "type": "PDF",
+      "link": "/resources/brochure.pdf"
+    },
+    {
+      "title": "HCI 研究指南",
+      "description": "面向青年学者的人机交互研究入门",
+      "type": "PDF",
+      "link": "/resources/guide.pdf"
+    }
+  ],
+  "en": [
+    {
+      "title": "ICACHI Logo (Vector)",
+      "description": "Association logo in SVG format",
+      "type": "SVG",
+      "link": "/images/icachi.svg"
+    },
+    {
+      "title": "ICACHI Brochure",
+      "description": "Overview of the association and recent activities",
+      "type": "PDF",
+      "link": "/resources/brochure.pdf"
+    },
+    {
+      "title": "HCI Research Guide",
+      "description": "Introduction to HCI research for young scholars",
+      "type": "PDF",
+      "link": "/resources/guide.pdf"
+    }
+  ]
+}

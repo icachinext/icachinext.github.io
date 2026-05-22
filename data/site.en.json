@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "eyebrow": "ICACHI · since 2012",
+    "title": "Connecting the global Chinese HCI community",
+    "subtitle": "The International Chinese Association of Computer Human Interaction advances cross-cultural research and exchange in human–computer interaction, bringing together scholars, designers and practitioners worldwide.",
+    "primaryCta": { "text": "About us", "link": "/en/about" },
+    "secondaryCta": { "text": "Conferences", "link": "/en/conference" }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A global community for human-centered computing",
+    "summary": "ICACHI was founded on May 10, 2012 in Austin, USA during the ACM CHI conference. Its board comprises overseas Chinese HCI researchers active across the world, building bridges between academia, industry, and education.",
+    "more": { "text": "Learn more", "link": "/en/about" }
+  },
+  "conferences": {
+    "eyebrow": "Conferences",
+    "title": "ICACHI annual conferences",
+    "subtitle": "Since 2013, the association has hosted an annual academic conference in rotating cities around the world — twelve editions and counting.",
+    "viewAll": { "text": "View all conferences", "link": "/en/conference" }
+  },
+  "news": {
+    "eyebrow": "Latest",
+    "title": "News",
+    "viewAll": { "text": "All news", "link": "/en/news/" }
+  },
+  "resources": {
+    "eyebrow": "Resources",
+    "title": "Downloads",
+    "viewAll": { "text": "All resources", "link": "/en/resource" }
+  },
+  "memberLogin": {
+    "text": "Member Login",
+    "link": "#"
+  },
+  "footer": {
+    "tagline": "International Chinese Association of Computer Human Interaction",
+    "columns": [
+      {
+        "heading": "Association",
+        "links": [
+          { "text": "About", "link": "/en/about" },
+          { "text": "ByLaws", "link": "/en/bylaws" },
+          { "text": "Board Members", "link": "/en/about#board-members" }
+        ]
+      },
+      {
+        "heading": "Content",
+        "links": [
+          { "text": "News", "link": "/en/news/" },
+          { "text": "Conference", "link": "/en/conference" },
+          { "text": "Resources", "link": "/en/resource" }
+        ]
+      },
+      {
+        "heading": "Contact",
+        "links": [
+          { "text": "office@icachi.org", "link": "mailto:office@icachi.org" }
+        ],
+        "text": [
+          "Contact: Prof. Zhiyong Fu",
+          "Registered: 849 Laurelwood Dr, Waterloo, ON, Canada"
+        ]
+      }
+    ],
+    "wechat": {
+      "label": "WeChat Official Account",
+      "qr": "/images/qr.jpg"
+    },
+    "copyright": "© 2012–{{year}} ICACHI. All rights reserved."
+  }
+}

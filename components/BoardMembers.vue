@@ -1,67 +1,109 @@
 <script setup>
+import { computed } from 'vue'
 import boardData from '../data/board.json'
+
+const ROLE_ORDER = [
+  'President',
+  'Executive Vice President',
+  'Vice President',
+  'Secretary General',
+  'Deputy Secretary General',
+  'Board Member',
+  'President of Youth Committee',
+  'VP of Youth Committee',
+  'Student Board Member',
+  'Supervisor',
+  'Honorary life President'
+]
+
+function normalizeRole(r) {
+  return (r || '').trim()
+}
+
+const grouped = computed(() => {
+  const map = new Map()
+  for (const m of boardData) {
+    const r = normalizeRole(m.role)
+    if (!map.has(r)) map.set(r, [])
+    map.get(r).push(m)
+  }
+  return ROLE_ORDER
+    .map(role => ({ role, members: map.get(role) || [] }))
+    .filter(g => g.members.length)
+})
 </script>
 
 <template>
-  <div class="board-grid">
-    <div v-for="member in boardData" :key="member.name" class="member-card">
-      <img :src="member.avatar" :alt="member.name" class="member-avatar">
-      <div class="member-info">
-        <h4>{{ member.name }}</h4>
-        <p class="role">{{ member.role }}</p>
-        <p class="org">{{ member.org }}</p>
+  <div class="board">
+    <section v-for="g in grouped" :key="g.role" class="group">
+      <h3 class="group-title">{{ g.role }}</h3>
+      <div class="grid">
+        <div v-for="m in g.members" :key="m.name" class="member">
+          <img :src="m.avatar" :alt="m.name" class="avatar" loading="lazy" />
+          <div class="info">
+            <h4>{{ m.name }}</h4>
+            <p>{{ m.org }}</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <style scoped>
-.board-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 24px 0;
 }
 
-.member-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.member-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.member-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.member-info h4 {
-  margin: 0.5rem 0;
-  color: var(--vp-c-text-1);
-}
-
-.role {
-  color: var(--vp-c-brand-1);
+.group-title {
+  font-size: 14px;
   font-weight: 600;
-  margin: 0.2rem 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--ic-border);
 }
 
-.org {
-  color: var(--vp-c-text-2);
-  font-size: 0.9rem;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 32px 24px;
+}
+
+.member {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  filter: grayscale(0);
+  transition: filter var(--ic-transition);
+}
+
+.info h4 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  line-height: 1.3;
+}
+
+.info p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  line-height: 1.4;
 }
 </style>

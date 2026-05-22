@@ -1,10 +1,9 @@
 ---
 title: 资源
-layout: home
 ---
 
-这里提供协会相关的资料下载。
+# 资源
 
-- [协会Logo矢量图](/resources/logo.svg)
-- [ICACHI 宣传册](/resources/brochure.pdf)
-- [HCI 研究指南](/resources/guide.pdf)
+协会相关的下载资料。
+
+<ResourceList />

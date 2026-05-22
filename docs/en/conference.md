@@ -2,8 +2,8 @@
 title: Conference
 ---
 
-# Conference
+# Conferences
 
-ICACHI organizes the annual Chinese CHI conference, the premier gathering for the Chinese HCI community.
+Since 2013, ICACHI has held its annual academic conference in rotating cities worldwide — twelve editions and counting.
 
 <ConferenceGrid />

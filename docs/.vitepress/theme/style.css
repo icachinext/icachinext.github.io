@@ -1,68 +1,43 @@
-/* Global Font Stack */
-:root {
-  --vp-font-family-base: "Inter", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+@import "./tokens.css";
 
-  /* Brand Colors - Premium Blue Palette */
-  --vp-c-brand-1: #2563eb;
-  --vp-c-brand-2: #1d4ed8;
-  --vp-c-brand-3: #1e40af;
-  --vp-c-brand-soft: rgba(37, 99, 235, 0.1);
-
-  /* Text Colors */
-  --vp-c-text-1: #1f2937;
-  --vp-c-text-2: #4b5563;
-
-  /* Backgrounds */
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-alt: #f9fafb;
+/* Prevent layout shift */
+html {
+  overflow-y: scroll;
 }
 
-/* Dark Mode Adjustments */
-.dark {
-  --vp-c-brand-1: #3b82f6;
-  --vp-c-brand-2: #60a5fa;
-  --vp-c-brand-3: #93c5fd;
-  --vp-c-bg: #111827;
-  --vp-c-bg-alt: #1f2937;
-  --vp-c-text-1: #f3f4f6;
-  --vp-c-text-2: #d1d5db;
-}
-
-/* Premium Component Styling */
-.home-hero-slide {
-  margin-bottom: 4rem;
-}
-
-/* Smooth Transitions */
-a,
-button,
-.vp-doc img {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/* Kill VitePress gradient on H1 */
 .vp-doc h1 {
-  margin-top: 48px;
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: var(--vp-c-text-1) !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-/* Glassmorphism Navbar */
+/* Navbar — flat white, 1px border */
 .VPNav {
-  backdrop-filter: blur(12px) saturate(180%) !important;
-  background-color: rgba(255, 255, 255, 0.7) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: var(--vp-c-bg) !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid var(--ic-border) !important;
 }
 
 .dark .VPNav {
-  background-color: rgba(17, 24, 39, 0.7) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--vp-c-bg) !important;
 }
 
-/* Force Navbar Consistency across Layouts */
+.VPNavBar.has-sidebar .title {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+.VPNavBar.has-sidebar .divider {
+  display: none !important;
+}
+
 .VPNavBar .container {
-  max-width: 1400px !important;
-  /* Standardize width */
+  max-width: var(--ic-container) !important;
   margin: 0 auto !important;
   padding: 0 32px !important;
-  /* Consistent padding */
   width: 100% !important;
 }
 
@@ -71,152 +46,61 @@ button,
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-
-  .VPNavBar .container {
-    padding: 0 32px !important;
+  .VPNavBar.has-sidebar .content-body {
+    background: transparent !important;
   }
 }
 
-/* Increase Logo Size */
 .VPNavBarTitle .logo,
 .VPNavBarTitle .VPImage {
-  height: 36px !important;
+  height: 32px !important;
   width: auto !important;
 }
 
-/* Card Effects */
-.card-hover-effect {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-hover-effect:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15);
-}
-
-/* Typography Enhancements */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -0.02em;
-}
-
-.vp-doc h1 {
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-/* Button Gradients */
-.action-button {
-  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
-  border: none;
-  color: white;
-  font-weight: 600;
-}
-
-.action-button:hover {
-  box-shadow: 0 4px 12px var(--vp-c-brand-soft);
-}
-
-/* Layout Stability */
-html {
-  overflow-y: scroll;
-  /* Forces scrollbar to prevent layout shift */
-}
-
-/* Ensure Search Bar Stability */
-.VPNavBarSearch {
-  transition: none !important;
-  /* Prevent transition jumps */
-}
-
-/* Footer Customization */
-.VPFooter .message {
-  width: 100%;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem 0;
-  gap: 2rem;
-}
-
-.footer-section {
-  flex: 1;
-}
-
-.footer-section p {
-  margin: 0.5rem 0;
-  line-height: 1.5;
-}
-
-.wechat-section {
-  display: flex;
-  flex-direction: column;
+/* Member login button (injected via Layout slot) */
+.ic-member-login {
+  display: inline-flex;
   align-items: center;
-  flex: 0 0 auto;
+  margin-left: 12px;
+  padding: 6px 14px;
+  border: 1px solid var(--ic-border-strong);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: all var(--ic-transition);
+  white-space: nowrap;
 }
 
-.footer-qr {
-  width: 120px;
-  height: 120px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 0.5rem;
+.ic-member-login:hover {
+  background: var(--ic-border-strong);
+  color: var(--vp-c-bg);
 }
 
-@media (max-width: 640px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+@media (max-width: 768px) {
+  .ic-member-login {
+    display: none;
   }
 }
 
-/* Full Width Page Layout Override for Home */
-.home-custom-layout .vp-doc,
-.home-custom-layout .VPHome,
-.home-custom-layout .VPHomeContent {
+/* Home page — full bleed (no doc container) */
+.home .VPContent {
+  padding: 0 !important;
+}
+
+.home .VPContent .container,
+.home .vp-doc {
   max-width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
 }
 
-.home-custom-layout .VPContent .container {
-  max-width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
+/* Default doc layout: keep generous spacing */
+.vp-doc h1 { margin-top: 0; margin-bottom: 24px; }
+.vp-doc h2 { margin-top: 56px; padding-top: 0; border-top: none; }
 
-/* Fix for HeroSlide negative margins */
-.home-custom-layout .VPContent {
-  padding: 0 !important;
-}
-
-/* Make Bylaws (sidebar) Navbar consistent with News */
-.VPNavBar.has-sidebar .title {
-  width: auto !important;
-  border-bottom: none !important;
-  background-color: transparent !important;
-}
-
-.VPNavBar.has-sidebar .divider {
+/* Hide default footer (we render our own SiteFooter) */
+.VPFooter {
   display: none !important;
-}
-
-@media (min-width: 960px) {
-  .VPNavBar.has-sidebar .content-body {
-    background-color: transparent !important;
-  }
 }
