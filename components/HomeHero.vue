@@ -7,37 +7,44 @@ const hero = computed(() => site.value.hero)
 const memberLink = computed(() => site.value.memberLogin.link)
 
 const logoRef  = ref(null)
-const textRef  = ref(null)
-const titleRef = ref(null) // measures center of 世界华人华侨人机交互协会
+const titleRef = ref(null) // <h1> — only used for measuring center
+const textRef  = ref(null) // .hi-text (both title lines)
+const bodyRef  = ref(null) // .hero-body (sub paragraph + CTAs)
 
 onMounted(async () => {
   await nextTick()
-  if (!logoRef.value || !textRef.value || !titleRef.value) return
+  if (!logoRef.value || !titleRef.value || !textRef.value || !bodyRef.value) return
 
   const logoRect  = logoRef.value.getBoundingClientRect()
   const titleRect = titleRef.value.getBoundingClientRect()
 
-  // How far right must the logo travel to center over the title text?
+  // How far right does the logo need to move to sit centered on the title?
   const logoMid  = logoRect.left + logoRect.width / 2
   const titleMid = titleRect.left + titleRect.width / 2
-  const offset   = titleMid - logoMid // positive = logo shifts rightward
+  const offset   = titleMid - logoMid
 
-  // Initial state: logo centered on title; text hidden and pulled left (opposite side)
+  // Initial state — logo displaced right over title center; all text hidden
   logoRef.value.style.cssText = `transform:translateX(${offset}px);transition:none;`
-  textRef.value.style.cssText = `opacity:0;transform:translateX(-${Math.abs(offset) * 0.55}px);transition:none;`
+  textRef.value.style.cssText = `opacity:0;transition:none;`
+  bodyRef.value.style.cssText = `opacity:0;transition:none;`
 
   void logoRef.value.offsetWidth // force reflow
 
-  // After 1 s pause: logo slides LEFT to natural position,
-  // text slides RIGHT into natural position — diverging from center
+  // T + 1000ms: logo begins sliding left to its natural position (1800ms ease)
   setTimeout(() => {
     requestAnimationFrame(() => {
       logoRef.value.style.cssText =
         'transform:translateX(0);transition:transform 1800ms cubic-bezier(0.25,0.46,0.45,0.94);'
-      textRef.value.style.cssText =
-        'opacity:1;transform:translateX(0);transition:opacity 1400ms 200ms ease,transform 1400ms 200ms ease;'
     })
   }, 1000)
+
+  // T + 2800ms (logo has just landed): all content fades in simultaneously
+  setTimeout(() => {
+    requestAnimationFrame(() => {
+      textRef.value.style.cssText = 'opacity:1;transition:opacity 700ms ease;'
+      bodyRef.value.style.cssText = 'opacity:1;transition:opacity 700ms ease;'
+    })
+  }, 2800)
 })
 </script>
 
@@ -45,24 +52,27 @@ onMounted(async () => {
   <section class="hero">
     <div class="ic-container hero-inner">
 
-      <!-- Brand: logo and titles animate apart from the center -->
+      <!-- Brand row: logo animates left, text fades in -->
       <div class="hero-brand">
         <img src="/images/icachi-logo.svg" ref="logoRef" class="hi-logo" alt="ICACHI" />
-        <div class="hi-text" ref="textRef">
+        <!-- opacity:0 inline so there is no flash before JS runs -->
+        <div class="hi-text" ref="textRef" style="opacity:0">
           <h1 class="hero-title" ref="titleRef">{{ hero.title }}</h1>
           <p v-if="hero.titleEn" class="hero-title-en">{{ hero.titleEn }}</p>
         </div>
       </div>
 
-      <p class="hero-sub">{{ hero.subtitle }}</p>
-
-      <div class="hero-ctas">
-        <a class="ic-btn" :href="hero.primaryCta.link">
-          {{ hero.primaryCta.text }} <span aria-hidden="true">→</span>
-        </a>
-        <a class="ic-btn ic-btn-primary" :href="memberLink">
-          加入我们 <span aria-hidden="true">→</span>
-        </a>
+      <!-- Sub-copy + CTAs: hidden until logo lands, then fade in together -->
+      <div class="hero-body" ref="bodyRef" style="opacity:0">
+        <p class="hero-sub">{{ hero.subtitle }}</p>
+        <div class="hero-ctas">
+          <a class="ic-btn" :href="hero.primaryCta.link">
+            {{ hero.primaryCta.text }} <span aria-hidden="true">→</span>
+          </a>
+          <a class="ic-btn ic-btn-primary" :href="memberLink">
+            加入我们 <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
 
     </div>
@@ -73,7 +83,7 @@ onMounted(async () => {
 .hero {
   padding: clamp(100px, 15vw, 180px) 0 clamp(80px, 10vw, 130px);
   background: var(--vp-c-bg);
-  overflow: hidden; /* clip logo during its slide-in */
+  overflow: hidden;
 }
 
 .hero-inner {
@@ -119,6 +129,14 @@ onMounted(async () => {
   opacity: 0.5;
   line-height: 1.5;
   white-space: nowrap;
+}
+
+/* hero-body sits directly inside hero-inner (column flex) */
+.hero-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-sub {
@@ -176,7 +194,6 @@ onMounted(async () => {
   .hero-brand { flex-direction: column; gap: 20px; text-align: center; }
   .hi-text { text-align: center; }
   .hi-logo { height: 60px; }
-  /* Allow wrapping on small screens */
   .hero-title    { white-space: normal; }
   .hero-title-en { white-space: normal; font-size: 12px; }
 }
