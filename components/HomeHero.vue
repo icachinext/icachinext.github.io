@@ -76,7 +76,7 @@ onMounted(async () => {
           <a class="ic-btn" :href="hero.primaryCta.link">
             {{ hero.primaryCta.text }}
           </a>
-          <a class="ic-btn ic-btn-primary" :href="joinUs.link">
+          <a class="ic-btn ic-btn-primary" :href="joinUs.link" target="_blank" rel="noopener">
             {{ joinUs.text }}
           </a>
         </div>

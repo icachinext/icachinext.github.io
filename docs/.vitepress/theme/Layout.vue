@@ -42,6 +42,8 @@ onMounted(async () => {
       <a
         class="ic-member-login"
         :href="site.memberLogin.link"
+        target="_blank"
+        rel="noopener"
         data-placeholder="member-login"
       >
         {{ site.memberLogin.text }}
