@@ -59,11 +59,18 @@ html.dark { color-scheme: light; }
 
 /* ── Navbar item ordering ─────────────────────────────── */
 /* Desired: [menu] [member-login] [search icon] [locale]  */
+/* Default HTML order: search→menu→translations→social→extra→login */
+/* Set explicit order on every item; hide unused ones.    */
 .VPNavBar .content-body               { align-items: center; }
-.VPNavBar .content-body .menu         { order: 1; }
-.VPNavBar .content-body .ic-member-login { order: 2; }
-.VPNavBar .content-body .search       { order: 3; }
-.VPNavBar .content-body .translations { order: 4; }
+.VPNavBar .content-body .menu         { order: 1 !important; }
+.VPNavBar .content-body .ic-member-login { order: 2 !important; }
+.VPNavBar .content-body .search       { order: 3 !important; }
+.VPNavBar .content-body .translations { order: 4 !important; }
+/* social-links is always empty; extra is the mobile overflow flyout */
+.VPNavBar .content-body .social-links { display: none !important; }
+@media (min-width: 768px) {
+  .VPNavBar .content-body .extra      { display: none !important; }
+}
 
 /* ── Search: magnifying glass only, no background/border ── */
 .VPNavBarSearch .DocSearch-Button,

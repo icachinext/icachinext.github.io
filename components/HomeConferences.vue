@@ -19,8 +19,7 @@ const others = sorted.slice(1, 4)
         <span class="ic-eyebrow">{{ copy.eyebrow }}</span>
         <h2>{{ copy.title }}</h2>
         <p v-if="copy.titleSub" class="title-sub">
-          {{ copy.titleSub }}<br v-if="copy.titleSub2" />
-          <span v-if="copy.titleSub2">{{ copy.titleSub2 }}</span>
+          {{ copy.titleSub }}
         </p>
         <p>{{ copy.subtitle }}</p>
       </header>
@@ -82,7 +81,7 @@ const others = sorted.slice(1, 4)
 
 .confs-head {
   text-align: center;
-  max-width: 720px;
+  max-width: none;
   margin: 0 auto 56px;
 }
 
@@ -106,6 +105,7 @@ const others = sorted.slice(1, 4)
   letter-spacing: 0.01em;
   margin: 0 0 10px !important;
   line-height: 1.5;
+  white-space: nowrap;
 }
 
 .confs-head p {

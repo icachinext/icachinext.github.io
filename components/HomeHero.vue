@@ -6,35 +6,38 @@ const { site } = useSiteData()
 const hero = computed(() => site.value.hero)
 const memberLink = computed(() => site.value.memberLogin.link)
 
-const stageRef = ref(null)
 const logoRef  = ref(null)
 const textRef  = ref(null)
+const titleRef = ref(null) // measures center of 世界华人华侨人机交互协会
 
 onMounted(async () => {
   await nextTick()
-  if (!stageRef.value || !logoRef.value || !textRef.value) return
+  if (!logoRef.value || !textRef.value || !titleRef.value) return
 
   const logoRect  = logoRef.value.getBoundingClientRect()
-  const stageRect = stageRef.value.getBoundingClientRect()
+  const titleRect = titleRef.value.getBoundingClientRect()
 
-  // Offset needed to center the logo within the stage
-  const logoCenter  = logoRect.left + logoRect.width / 2
-  const stageCenter = stageRect.left + stageRect.width / 2
-  const offset      = stageCenter - logoCenter
+  // How far right must the logo travel to center over the title text?
+  const logoMid  = logoRect.left + logoRect.width / 2
+  const titleMid = titleRect.left + titleRect.width / 2
+  const offset   = titleMid - logoMid // positive = logo shifts rightward
 
-  // Initial state — no transition yet
+  // Initial state: logo centered on title; text hidden and pulled left (opposite side)
   logoRef.value.style.cssText = `transform:translateX(${offset}px);transition:none;`
-  textRef.value.style.cssText = `opacity:0;transform:translateX(${offset * 0.5}px);transition:none;`
+  textRef.value.style.cssText = `opacity:0;transform:translateX(-${Math.abs(offset) * 0.55}px);transition:none;`
 
   void logoRef.value.offsetWidth // force reflow
 
-  // Animate to natural positions
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    logoRef.value.style.cssText =
-      'transform:translateX(0);transition:transform 900ms cubic-bezier(0.25,0.46,0.45,0.94);'
-    textRef.value.style.cssText =
-      'opacity:1;transform:translateX(0);transition:opacity 700ms 250ms ease,transform 700ms 250ms ease;'
-  }))
+  // After 1 s pause: logo slides LEFT to natural position,
+  // text slides RIGHT into natural position — diverging from center
+  setTimeout(() => {
+    requestAnimationFrame(() => {
+      logoRef.value.style.cssText =
+        'transform:translateX(0);transition:transform 1800ms cubic-bezier(0.25,0.46,0.45,0.94);'
+      textRef.value.style.cssText =
+        'opacity:1;transform:translateX(0);transition:opacity 1400ms 200ms ease,transform 1400ms 200ms ease;'
+    })
+  }, 1000)
 })
 </script>
 
@@ -42,14 +45,12 @@ onMounted(async () => {
   <section class="hero">
     <div class="ic-container hero-inner">
 
-      <!-- Animated brand: logo slides left, text slides from logo to right -->
-      <div class="hero-stage" ref="stageRef">
-        <div class="hero-brand">
-          <img src="/images/icachi-logo.svg" ref="logoRef" class="hi-logo" alt="ICACHI" />
-          <div class="hi-text" ref="textRef">
-            <h1 class="hero-title">{{ hero.title }}</h1>
-            <p v-if="hero.titleEn" class="hero-title-en">{{ hero.titleEn }}</p>
-          </div>
+      <!-- Brand: logo and titles animate apart from the center -->
+      <div class="hero-brand">
+        <img src="/images/icachi-logo.svg" ref="logoRef" class="hi-logo" alt="ICACHI" />
+        <div class="hi-text" ref="textRef">
+          <h1 class="hero-title" ref="titleRef">{{ hero.title }}</h1>
+          <p v-if="hero.titleEn" class="hero-title-en">{{ hero.titleEn }}</p>
         </div>
       </div>
 
@@ -72,7 +73,7 @@ onMounted(async () => {
 .hero {
   padding: clamp(100px, 15vw, 180px) 0 clamp(80px, 10vw, 130px);
   background: var(--vp-c-bg);
-  overflow: hidden; /* contain logo during slide-in */
+  overflow: hidden; /* clip logo during its slide-in */
 }
 
 .hero-inner {
@@ -82,18 +83,11 @@ onMounted(async () => {
   text-align: center;
 }
 
-/* Stage: full width reference for centering calculation */
-.hero-stage {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 28px;
-}
-
 .hero-brand {
   display: inline-flex;
   align-items: center;
   gap: 32px;
+  margin-bottom: 28px;
 }
 
 .hi-logo {
@@ -113,17 +107,18 @@ onMounted(async () => {
   letter-spacing: -0.03em;
   margin: 0 0 8px;
   color: var(--vp-c-text-1);
+  white-space: nowrap;
 }
 
 .hero-title-en {
-  font-size: clamp(12px, 0.9vw, 14px);
-  font-weight: 600;
+  font-size: clamp(11px, 0.85vw, 13px);
+  font-weight: 500;
   letter-spacing: 0.01em;
   color: var(--vp-c-text-1);
   margin: 0;
-  opacity: 0.55;
+  opacity: 0.5;
   line-height: 1.5;
-  max-width: 52ch;
+  white-space: nowrap;
 }
 
 .hero-sub {
@@ -143,7 +138,7 @@ onMounted(async () => {
   justify-content: center;
 }
 
-/* Outline button (primary CTA) */
+/* Outline button */
 .ic-btn {
   display: inline-flex;
   align-items: center;
@@ -177,9 +172,12 @@ onMounted(async () => {
   color: var(--vp-c-bg);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .hero-brand { flex-direction: column; gap: 20px; text-align: center; }
   .hi-text { text-align: center; }
   .hi-logo { height: 60px; }
+  /* Allow wrapping on small screens */
+  .hero-title    { white-space: normal; }
+  .hero-title-en { white-space: normal; font-size: 12px; }
 }
 </style>
