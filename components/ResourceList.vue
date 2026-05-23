@@ -8,9 +8,8 @@ const { resourceList } = useSiteData()
   <ul class="list">
     <li v-for="r in resourceList" :key="r.title" class="item ic-card">
       <a :href="r.link" target="_blank" rel="noopener">
-        <span class="type">{{ r.type }}</span>
         <div class="body">
-          <h4>{{ r.title }}</h4>
+          <h4>{{ r.title }} <span class="type">{{ r.type }}</span></h4>
           <p>{{ r.description }}</p>
         </div>
         <span class="arrow" aria-hidden="true">↓</span>
@@ -31,7 +30,7 @@ const { resourceList } = useSiteData()
 
 .item a {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: 24px;
   align-items: center;
   padding: 20px 24px;
@@ -50,6 +49,10 @@ const { resourceList } = useSiteData()
 }
 
 .body h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   margin: 0 0 4px;
   font-size: 15px;
   font-weight: 500;
