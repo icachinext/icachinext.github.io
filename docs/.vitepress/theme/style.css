@@ -128,12 +128,10 @@ html.dark { color-scheme: light; }
   margin: 0 !important;
 }
 
-/* ── Conference page: wider content container ─────────── */
-/* VitePress limits .VPDoc .container to ~992 px / 1280 px.  */
-/* conf-wide overrides that to match our 1440 px site layout. */
-.conf-wide .VPDoc .container {
-  max-width: var(--ic-container) !important;
-}
+/* ── Conference page: same container as other doc pages, ──
+   but content fills the full container width (no narrow
+   text column). VitePress default container is kept;
+   only the inner content width restriction is lifted.    */
 .conf-wide .VPDoc .content,
 .conf-wide .VPDoc .content-container {
   max-width: none !important;
