@@ -17,6 +17,24 @@
       "description": "面向青年学者的人机交互研究入门",
       "type": "PDF",
       "link": "/resources/guide.pdf"
+    },
+    {
+      "title": "ICHEC 稿件模板（LaTeX）",
+      "description": "ACM 会议论文 LaTeX 主模板，适用于 ICHEC 投稿",
+      "type": "ZIP",
+      "link": "https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip"
+    },
+    {
+      "title": "ICHEC 稿件模板（Overleaf）",
+      "description": "ACM 会议论文 Overleaf 在线模板，可直接在 Overleaf 中编辑",
+      "type": "Overleaf",
+      "link": "https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc"
+    },
+    {
+      "title": "ICHEC 稿件模板（Word）",
+      "description": "ACM 会议论文 Word 投稿模板",
+      "type": "DOCX",
+      "link": "https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx"
     }
   ],
   "en": [
@@ -37,6 +55,24 @@
       "description": "Introduction to HCI research for young scholars",
       "type": "PDF",
       "link": "/resources/guide.pdf"
+    },
+    {
+      "title": "ICHEC Submission Template (LaTeX)",
+      "description": "ACM conference proceedings primary LaTeX template for ICHEC submissions",
+      "type": "ZIP",
+      "link": "https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip"
+    },
+    {
+      "title": "ICHEC Submission Template (Overleaf)",
+      "description": "ACM conference proceedings template on Overleaf — edit directly online",
+      "type": "Overleaf",
+      "link": "https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc"
+    },
+    {
+      "title": "ICHEC Submission Template (Word)",
+      "description": "ACM conference proceedings Word submission template",
+      "type": "DOCX",
+      "link": "https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx"
     }
   ]
 }
