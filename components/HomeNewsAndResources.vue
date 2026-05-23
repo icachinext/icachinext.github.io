@@ -54,11 +54,8 @@ function fmt(date) {
         <ul class="res-list">
           <li v-for="r in topResources" :key="r.title" class="res-item ic-card">
             <a :href="r.link" target="_blank" rel="noopener">
-              <div class="res-meta">
-                <span class="res-type">{{ r.type }}</span>
-              </div>
               <div class="res-body">
-                <h4>{{ r.title }}</h4>
+                <h4>{{ r.title }}<span class="res-type">{{ r.type }}</span></h4>
                 <p>{{ r.description }}</p>
               </div>
               <span class="res-arrow" aria-hidden="true">↓</span>
@@ -168,12 +165,23 @@ function fmt(date) {
 
 .res-item a {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: 16px;
   align-items: center;
   padding: 16px 20px;
   text-decoration: none;
   color: inherit;
+}
+
+.res-body h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: var(--vp-c-text-1);
 }
 
 .res-type {
@@ -184,13 +192,7 @@ function fmt(date) {
   border: 1px solid var(--ic-border);
   padding: 4px 8px;
   border-radius: 4px;
-}
-
-.res-body h4 {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0 0 4px;
-  color: var(--vp-c-text-1);
+  flex-shrink: 0;
 }
 
 .res-body p {
