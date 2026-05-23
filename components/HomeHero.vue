@@ -31,9 +31,9 @@ onMounted(async () => {
   void logoRef.value.offsetWidth // force reflow
 
   // ── Animation timing ──────────────────────────────────
-  const PAUSE       = 600   // ms  initial hold before logo moves
-  const SLIDE       = 900   // ms  logo slide duration
-  const FADE        = 500   // ms  content fade-in duration
+  const PAUSE       = 400   // ms  initial hold before logo moves
+  const SLIDE       = 700   // ms  logo slide duration
+  const FADE        = 400   // ms  content fade-in duration
   // ──────────────────────────────────────────────────────
 
   // T + PAUSE: logo slides left to natural position
@@ -64,7 +64,7 @@ onMounted(async () => {
         <!-- opacity:0 inline so there is no flash before JS runs -->
         <div class="hi-text" ref="textRef" style="opacity:0">
           <h1 class="hero-title" ref="titleRef">{{ hero.title }}</h1>
-          <p v-if="hero.titleEn" class="hero-title-en">{{ hero.titleEn }}</p>
+          <p v-if="hero.titleEn" class="hero-title-en" style="text-align: center;">{{ hero.titleEn }}</p>
         </div>
       </div>
 
@@ -127,12 +127,12 @@ onMounted(async () => {
 }
 
 .hero-title-en {
-  font-size: clamp(11px, 0.85vw, 13px);
+  font-size: clamp(13px, 1.1vw, 16px);
   font-weight: 500;
   letter-spacing: 0.01em;
-  color: var(--vp-c-text-1);
+  color: #000;
   margin: 0;
-  opacity: 0.5;
+  opacity: 1;
   line-height: 1.5;
   white-space: nowrap;
 }
