@@ -21,7 +21,7 @@
 data/past-boards/
 ├── board-2024.json   ✅ 已有
 ├── board-2022.json   ← 待补充
-├── board-2020.json   ✅ 已有
+├── board-2020.json   ← 待补充
 ├── board-2018.json   ← 待补充
 ├── board-2016.json   ← 待补充
 ├── board-2014.json   ← 待补充
