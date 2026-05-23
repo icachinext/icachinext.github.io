@@ -3,14 +3,16 @@
     "eyebrow": "关于我们",
     "title": "世界华人华侨人机交互协会",
     "titleEn": "International Chinese Association of Computer Human Interaction, ICACHI",
-    "subtitle": "于2012年5月10日在美国Austin（ACM CHI2012国际会议期间）成立。理事会由27名来自于人机交互领域（Human Computer Interaction）且活跃在世界各地的海外华人华侨代表组成。",
-    "primaryCta": { "text": "关于我们", "link": "/about" }
+    "subtitle": "2012年5月10日于美国 Austin（ACM CHI 2012国际会议期间）成立。理事会由27名来自于人机交互领域（Human Computer Interaction）且活跃在世界各地的海外华人华侨代表发起。",
+    "primaryCta": {
+      "text": "关于我们",
+      "link": "/about"
+    }
   },
   "conferences": {
     "eyebrow": "协会年会",
     "title": "Chinese CHI → ICHEC",
-    "titleSub": "The International Symposium of Chinese CHI →",
-    "titleSub2": "International Conference on Human-Engaged Computing",
+    "titleSub": "The International Symposium of Chinese CHI → International Conference on Human-Engaged Computing",
     "subtitle": "自 2013 年起，协会每年在全球轮值城市举办年度学术会议。",
     "viewAll": {
       "text": "查看全部会议",
@@ -31,9 +33,13 @@
       "link": "/resource"
     }
   },
+  "joinUs": {
+    "text": "加入我们",
+    "link": "https://pre.icachi.org/auth/signup"
+  },
   "memberLogin": {
     "text": "会员登录",
-    "link": "#"
+    "link": "https://pre.icachi.org/auth/signup"
   },
   "footer": {
     "tagline": "International Chinese Association of Computer Human Interaction",

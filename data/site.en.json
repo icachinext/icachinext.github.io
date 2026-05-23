@@ -39,9 +39,13 @@
       "link": "/en/resource"
     }
   },
+  "joinUs": {
+    "text": "Join Us",
+    "link": "https://pre.icachi.org/auth/signup"
+  },
   "memberLogin": {
     "text": "Member Login",
-    "link": "#"
+    "link": "https://pre.icachi.org/auth/signup"
   },
   "footer": {
     "tagline": "International Chinese Association of Computer Human Interaction",

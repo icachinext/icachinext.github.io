@@ -4,6 +4,7 @@ import { useSiteData } from './useSiteData'
 
 const { site } = useSiteData()
 const hero = computed(() => site.value.hero)
+const joinUs = computed(() => site.value.joinUs)
 const memberLink = computed(() => site.value.memberLogin.link)
 
 const logoRef  = ref(null)
@@ -31,8 +32,8 @@ onMounted(async () => {
   void logoRef.value.offsetWidth // force reflow
 
   // ── Animation timing ──────────────────────────────────
-  const PAUSE       = 400   // ms  initial hold before logo moves
-  const SLIDE       = 700   // ms  logo slide duration
+  const PAUSE       = 0   // ms  initial hold before logo moves
+  const SLIDE       = 900   // ms  logo slide duration
   const FADE        = 400   // ms  content fade-in duration
   // ──────────────────────────────────────────────────────
 
@@ -75,8 +76,8 @@ onMounted(async () => {
           <a class="ic-btn" :href="hero.primaryCta.link">
             {{ hero.primaryCta.text }}
           </a>
-          <a class="ic-btn ic-btn-primary" :href="memberLink">
-            加入我们
+          <a class="ic-btn ic-btn-primary" :href="joinUs.link">
+            {{ joinUs.text }}
           </a>
         </div>
       </div>
@@ -149,7 +150,7 @@ onMounted(async () => {
   font-size: clamp(15px, 1.3vw, 18px);
   line-height: 1.75;
   color: var(--vp-c-text-2);
-  max-width: 640px;
+  max-width: 840px;
   margin: 0 0 40px;
   text-align: center;
 }

@@ -2,7 +2,7 @@
 title: "ICHEC 2026 人机交互会议论文短文征稿启事"
 date: 2026-05-23
 description: "ICHEC 2026 将由澳门城市大学承办，于 2026 年 11 月 23 - 26 日在中国澳门举行。现开放短文征稿，欢迎各位同仁踊跃投稿！"
-cover: /images/news/ichec26t.png
+cover: /news/ichec26t.png
 tags:
   - ICHEC 2026
   - 征稿

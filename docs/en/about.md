@@ -22,7 +22,7 @@ The mission of ICACHI is to advance the careers of its members, elevate the stan
 ## Vision
 
 <div class="about-vision">
-  <img src="/images/about/vision.png" alt="ICACHI Vision" />
+  <img src="/images/about/vision-en.png" alt="ICACHI Vision" />
 </div>
 
 HCI is as pervasive as air and water, present in every corner of our lives and work. It is an interdisciplinary field studying the design, evaluation, and implementation of interactive computing systems for human use, and is fundamentally important across computer science, information science, and beyond. Its goal is to enable faster and better exchange of information between humans and computers. HCI is therefore an indispensable area of research for a healthy information society in the 21st century.
