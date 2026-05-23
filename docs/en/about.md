@@ -10,4 +10,4 @@ The International Chinese Association of Computer Human Interaction (ICACHI) was
 
 ## Board Members
 
-<BoardMembers />
+<BoardWithHistory />

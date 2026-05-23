@@ -10,4 +10,4 @@ title: 关于我们
 
 ## 理事会成员
 
-<BoardMembers />
+<BoardWithHistory />

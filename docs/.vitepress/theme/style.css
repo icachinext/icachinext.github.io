@@ -128,6 +128,18 @@ html.dark { color-scheme: light; }
   margin: 0 !important;
 }
 
+/* ── Conference page: wider content container ─────────── */
+/* VitePress limits .VPDoc .container to ~992 px / 1280 px.  */
+/* conf-wide overrides that to match our 1440 px site layout. */
+.conf-wide .VPDoc .container {
+  max-width: var(--ic-container) !important;
+}
+.conf-wide .VPDoc .content,
+.conf-wide .VPDoc .content-container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
 /* Default doc layout */
 .vp-doc h1 { margin-top: 0; margin-bottom: 24px; }
 .vp-doc h2 { margin-top: 56px; padding-top: 0; border-top: none; }
