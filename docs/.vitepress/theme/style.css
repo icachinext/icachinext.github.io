@@ -66,11 +66,10 @@ html.dark { color-scheme: light; }
 .VPNavBar .content-body .ic-member-login { order: 2 !important; }
 .VPNavBar .content-body .search       { order: 3 !important; }
 .VPNavBar .content-body .translations { order: 4 !important; }
-/* social-links is always empty; extra is the mobile overflow flyout */
+/* social-links is always empty; extra is the mobile overflow flyout (768–1279 px) */
 .VPNavBar .content-body .social-links { display: none !important; }
-@media (min-width: 768px) {
-  .VPNavBar .content-body .extra      { display: none !important; }
-}
+/* Hide .extra at all desktop widths — JS also enforces this on mount */
+.VPNavBar .content-body .extra        { display: none !important; }
 
 /* ── Search: magnifying glass only, no background/border ── */
 .VPNavBarSearch .DocSearch-Button,
