@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import conferenceData from '../data/conferences.json'
 import { useSiteData } from './useSiteData'
+import ConferenceMap from './ConferenceMap.vue'
 
 const { site } = useSiteData()
 const copy = computed(() => site.value.conferences)
@@ -23,6 +24,11 @@ const others = sorted.slice(1, 4)
         </p>
         <p>{{ copy.subtitle }}</p>
       </header>
+
+      <!-- World map visualization -->
+      <ClientOnly>
+        <ConferenceMap />
+      </ClientOnly>
 
       <!-- Featured: latest conference — image 2/3, text 1/3 -->
       <a class="featured ic-card" :href="featured.link" target="_blank" rel="noopener">
