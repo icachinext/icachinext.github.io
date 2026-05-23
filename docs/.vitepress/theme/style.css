@@ -71,15 +71,25 @@ html.dark { color-scheme: light; }
 /* Hide .extra at all desktop widths — JS also enforces this on mount */
 .VPNavBar .content-body .extra        { display: none !important; }
 
-/* ── Search: magnifying glass only, no background/border ── */
+/* ── Search: icon-only, fixed size, no flex-grow ─────── */
+/* VitePress gives .VPNavBarSearch flex-grow:1 at ≥768 px,
+   which stretches it across the whole navbar. Override that
+   first, then shrink the button to a bare icon.            */
+.VPNavBarSearch {
+  flex-grow: 0 !important;
+  padding-left: 0 !important;
+}
+
 .VPNavBarSearch .DocSearch-Button,
 .VPNavBarSearch .vp-local-search-button {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 8px !important;
-  width: auto !important;
-  min-width: auto !important;
+  padding: 0 !important;
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  justify-content: center !important;
 }
 
 /* Hide text label & keyboard shortcut */
