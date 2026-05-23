@@ -1,7 +1,11 @@
 ---
-title: ICHEC 2025 圆满举办！
+title: "ICHEC 2025 圆满举办！"
 date: 2025-12-08
-cover: /news/ichec2025.jpg
+description: '2025年11月21日至23日，ICHEC 2025 在新加坡管理大学成功举办，以「包容、智能、连接」为主题，汇聚全球 HCI 领域专家学者与业界领袖。'
+cover: /images/news/ichec2025.jpg
+tags:
+  - ICHEC 2025
+lang: zh
 ---
 
 # ICHEC 2025 圆满举办!

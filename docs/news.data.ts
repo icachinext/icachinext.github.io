@@ -23,8 +23,8 @@ export default createContentLoader(['news/*.md', 'en/news/*.md'], {
             .map(({ url, frontmatter, excerpt }) => ({
                 title: frontmatter.title,
                 url,
-                excerpt: frontmatter.excerpt || excerpt,
-                date: frontmatter.date,
+                excerpt: frontmatter.description || frontmatter.excerpt || excerpt,
+                date: frontmatter.date || frontmatter.created,
                 cover: frontmatter.cover,
                 tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : []
             }))

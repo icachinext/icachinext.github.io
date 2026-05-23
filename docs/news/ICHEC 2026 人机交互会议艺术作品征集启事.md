@@ -1,0 +1,198 @@
+---
+title: "ICHEC 2026 人机交互会议艺术作品征集启事"
+date: 2026-05-23
+description: "ICHEC 2026 将由澳门城市大学承办，于 2026 年 11 月 23 - 26 日在中国澳门举行。现开放艺术作品征集，欢迎各位同仁踊跃投稿！"
+cover: /images/news/ichec26t.png
+tags:
+  - ICHEC 2026
+  - 征稿
+source: "https://mp.weixin.qq.com/s/rcjL0uiGGMf6poRS59TqrA"
+lang: zh
+---
+ICACHI *2026年5月22日 15:21*
+
+![Image](https://mmbiz.qpic.cn/sz_mmbiz_png/uYQiaOibPicHlEPUBsNib25bhXgd5ia2rmdJCaZPHjQ65X2XpYlz1fOWIPDhse4brJq8Pzd8aXJG08EeVInpee4XsfdJzdFeG4iclNfGKhlJJ31pA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0)
+
+**ICHEC 2026**
+
+人机交互会议艺术作品征集启事
+
+｜ 前身 Chinese CHI
+
+●
+
+**会议简介**
+
+世界华人华侨人机交互协会（ International Chinese Association of Computer Human Interaction，简称 ICACHI）举办的 International Conference on Human-Engaged Computing **（ICHEC 2026）** 将由 **澳门城市大学** 承办，于 **2026 年 11 月 23 - 26 日** **在中国澳门，永利皇宫（Wynn Palace）举行。** 本次会议主题为：共融（Inclusivity）、体验（Experience）、创新（Innovation）。
+
+我们诚邀艺术、设计及相关领域的从业者、研究人员和学生，在 ICHEC 2026 人机交互会议的 **艺术作品展览（Art Gallery）** **单元** 中提交艺术作品方案，我们尤其鼓励能让参会者亲身参与、互动的投稿。
+
+2026年 ICHEC 的艺术作品展览，旨在营造一个高度包容的跨学科平台，用于展示呼应大会主题“共融（Inclusivity）、体验（Experience）、创新（Innovation）”的优秀艺术创作，深入探索互动装置、数字艺术、界面原型、智能产品演示、可穿戴设备、沉浸式体验、实验视听作品、物质性探索、游戏或其他形式的互动体验。在主题框架下，本届展览的目标是促进参展者之间有意义的交流，以共融的理念拓宽体验的边界，以创新的实践重构艺术、设计与技术之间的关系。
+
+●
+
+**征稿范围与形式**
+
+欢迎包括但不限于以下形式的作品：
+
+- 共融交互界面与原型
+- 沉浸式体验装置作品
+- 人机协作创新制品
+- 情感计算交互装置
+- 文化科技融合互动与多媒体作品
+- 其他创新性互动体验
+
+●
+
+**提交指南**
+
+**请通过以下提交入口完成您的投稿：**
+
+https://www.ichec2026.com/zh-CN/cfp/
+
+**每份投稿需包含：**
+
+- **展览作品摘要：** 不超过 4 页的 A4 纸文档（PDF格式），需包含：作品标题；作者信息；艺术家陈述：说明作品背后的思想、创作背景、与大会主题的关联，以及创作过程、相关研究等。
+- **静态图像：** 至少一张参展作品的静态图片，分辨率不低于 800 × 600 像素，用于展示作品视觉面貌。
+- **视频：** 鼓励作者提交一段不超过2分钟的视频，仅供评审使用。视频文件需小于 100 MB（MP4 格式），或在提案文档中提供视频链接（如 YouTube、Vimeo）。
+- **技术规格与需求说明 ：** 不限页数，可含图示的 PDF 文件。应详细描述作品的技术实现方式、安装空间要求、大致尺寸、特殊布置需求，以及任何潜在风险及其管理方案。如有供电、网络、遮光、声音等特殊要求，请一并列出。
+- **授权声明：** 作品正式录用后，作者团队需向 ICHEC 2026 组委会提交一份授权声明，授权作品用于会议现场展览及相关宣传传播。
+
+**提交作品为非匿名形式，** **每件艺术作品只能提交一次。由分会主席组成的评审组进行评审。**
+
+**至少一名作者需 Standard（标准）注册参会，并在展出期间现场演示。**
+
+**重要事件节点：**
+
+- **投稿截止日期：** 2026 年 9 月 30 日
+- **录用通知日期：** 2026 年 10 月 10 日
+- **展览布展结束日期：** 2026 年11月 22 日
+- **展出日期：** 2026 年 11 月 23 日
+
+\* 所有截止时间均为 **AOE** 时间 23:59
+
+●
+
+**评审标准**
+
+- **主题契合度与艺术/学术质量：** 紧密围绕“共融（Inclusivity）、体验（Experience）、创新（Innovation）”大会主题。
+- **交互体验：** 提供有意义的创造性或批判性参与体验，促进人机共融互动。
+- **创新性：** 在概念、技术、表现形式或交互方式上体现明显创新。
+- **可行性：** 可在会议现场安全、便捷部署，技术稳定可靠。
+
+●
+
+**联系方式**
+
+**艺术展览单元主席：**
+
+**李晴川** ｜哈尔滨工业大学（深圳）
+
+**何思倩** ｜北京科技大学
+
+**熊原** ｜澳门城市大学
+
+**具体信息可查看官网：**
+
+ichec2026.com
+
+**如有任何疑问，请联系以下邮箱：**
+
+artgalleryichec@gmail.com
+
+期待您的创造性作品在澳门亮相！
+
+![Image](data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1px' height='1px' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0'%3E%3Cg transform='translate(-249.000000, -126.000000)' fill='%23FFFFFF'%3E%3Crect x='249' y='126' width='1' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
+
+**ICHEC 2026**
+
+Call for Artworks
+
+●
+
+**Conference Overview**
+
+The International Chinese Association of Computer Human Interaction (ICACHI) is delighted to announce that the **International Conference on Human-Engaged Computing (ICHEC 2026)** will be hosted by the City University of Macao and held at **Wynn Palace****, Macao, China,** from **November** **23rd** **to** **26th****,** 2026. The conference theme is **“Inclusivity, Experience, Innovation”.**
+
+We cordially invite practitioners, researchers, and students in art, design, and related fields to submit artwork proposals for the **Art Gallery of the ICHEC 2026.** Submissions that enable active participation and interaction by attendees are especially encouraged.
+
+The ICHEC 2026 Art Gallery aims to establish a highly inclusive interdisciplinary platform to showcase outstanding artistic creations that respond to the conference theme "Inclusivity, Experience, Innovation". It explores a wide range of interactive installations, digital art, interface prototypes, intelligent product demonstrations, wearable devices, immersive experiences, experimental audiovisual works, material explorations, games, and other forms of interactive experiences. Within this thematic framework, the goal of the exhibition is to foster meaningful exchanges among participants, broadening the boundaries of experience through inclusivity, and reconfiguring the relationships among art, design, and technology through innovation.
+
+●
+
+**Call for Submissions**
+
+We welcome submissions including, but not limited to, the following forms of work:
+
+- Inclusive interaction interfaces and prototypes
+- Immersive experience installations
+- Human-AI collaborative and innovative artifacts
+- Affective computing interactive installations
+- Interactive and multimedia works integrating culture and technology
+- Other innovative interactive experiences
+
+●
+
+**Submission Guidelines**
+
+**Please complete your submission via the submission portal below:**
+
+https://www.ichec2026.com/zh-CN/cfp/
+
+**Each submission must include:**
+
+- **Artwork Abstract:** A document (PDF format) of no more than 4 A4 pages, including: artwork title; author information; artist statement describing the ideas behind the work, creative background, relevance to the conference theme, as well as the creative process and related research.
+- **Still Image:** At least one still image of the submitted artwork with a resolution of no less than 800×600 pixels, to present the visual appearance of the work.
+- **Video:** In addition, artists are strongly encouraged to submit a video of up to 2 mins in length for review purposes only. In this case, authors must provide less than 100MB (in MP4) or provide a link (e.g., YouTube, Vimeo) in the proposal document.
+- **Technical Specifications and Requirements:** A PDF document (no page limit, may include diagrams) detailing the technical implementation of the work, installation space requirements, approximate dimensions, special setup needs, as well as any potential risks and their management plans. Special requirements such as power supply, network, light blocking, sound, etc., should also be listed.
+- **Authorization:** After the artwork has been officially accepted, the author's group will be required to submit an authorization statement for the use of the artwork to the Chinese CHI Committee for online and offline exhibition and dissemination.
+
+**Submissions are non-anonymous.**
+
+**At least one author must standard register** **for the conference and present the work on-site during the exhibition period.**
+
+**Important Dates**
+
+- **Submission Deadline:** 2026.09.30
+- **Notification:** 2026.10.10
+- **Exhibition Setup Deadline:** 2026.11.22
+- **Exhibition Dates:** 2026.11.23
+
+\* All deadlines are 23:59 **AoE** (Anywhere on Earth).
+
+●
+
+**Evaluation Criteria**
+
+- **Relevance to Theme and Artistic/Academic Quality:** The work should closely align with the conference theme of Inclusivity, Experience, Innovation.
+- **Interactive Experience:** It should provide a meaningful creative or critical participatory experience, fostering inclusive human-computer interaction.
+- **Innovativeness:** The work should demonstrate clear innovation in concept, technology, form of expression, or mode of interaction.
+- **Feasibility:** The work must be safe and easy to deploy on-site at the conference, with stable and reliable technical implementation.
+
+●
+
+**Contact & Inquiries**
+
+**Art Gallery Chairs:**
+
+Qingchuan Li｜Harbin Institute of Technology, Shenzhen
+
+Siqian He｜University of Science and Technology Beijing
+
+Yuan Xiong｜City University of Macau
+
+**For more details, please visit the official website:**
+
+ichec2026.com
+
+**If you have any questions, please contact the following email address:**
+
+artgalleryichec@gmail.com
+
+We look forward to the presentation of your creative art works in Macao!
+
+继续滑动看下一个
+
+华人华侨人机交互
+
+向上滑动看下一个
