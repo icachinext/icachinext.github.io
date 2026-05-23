@@ -19,7 +19,9 @@ export default createContentLoader(['news/*.md', 'en/news/*.md'], {
     transform(raw): NewsItem[] {
         return raw
             .filter(({ url, frontmatter }) =>
-                frontmatter.title && !url.endsWith('/news/'))
+                frontmatter.title &&
+                !url.endsWith('/news/') &&
+                !url.split('/').pop()?.startsWith('_'))
             .map(({ url, frontmatter, excerpt }) => ({
                 title: frontmatter.title,
                 url,
