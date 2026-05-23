@@ -67,6 +67,8 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   background: #0a0a0a;
   padding: 80px 0 32px;
   margin-top: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .ic-footer-inner {
