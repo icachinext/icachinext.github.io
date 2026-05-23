@@ -37,6 +37,10 @@ function fmt(date) {
                   <span v-for="t in item.tags" :key="t" class="tag">{{ t }}</span>
                 </div>
               </div>
+              <div v-if="item.cover" class="news-thumb">
+                <img :src="item.cover" :alt="item.title" />
+              </div>
+              <div v-else class="news-thumb news-thumb-empty" />
             </a>
           </li>
           <li v-if="!top.length" class="empty">暂无新闻。</li>
@@ -107,13 +111,33 @@ function fmt(date) {
 
 .news-item a {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 24px;
+  grid-template-columns: 100px 1fr 88px;
+  gap: 20px;
   padding: 20px 0;
   text-decoration: none;
   color: inherit;
-  align-items: baseline;
+  align-items: center;
   transition: opacity var(--ic-transition);
+}
+
+.news-thumb {
+  width: 88px;
+  aspect-ratio: 3 / 2;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--vp-c-bg-soft);
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.news-thumb-empty {
+  background: transparent;
 }
 
 .news-item a:hover { opacity: 0.7; }

@@ -109,6 +109,10 @@ function fmt(date) {
               <span v-for="t in item.tags" :key="t" class="tag">{{ t }}</span>
             </div>
           </div>
+          <div v-if="item.cover" class="thumb">
+            <img :src="item.cover" :alt="item.title" />
+          </div>
+          <div v-else class="thumb thumb-empty" />
         </a>
       </li>
       <li v-if="!pageItems.length" class="empty">
@@ -168,13 +172,33 @@ function fmt(date) {
 
 .item a {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 140px 1fr 160px;
   gap: 32px;
   padding: 24px 0;
   text-decoration: none;
   color: inherit;
-  align-items: baseline;
+  align-items: center;
   transition: opacity var(--ic-transition);
+}
+
+.thumb {
+  width: 160px;
+  aspect-ratio: 3 / 2;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--vp-c-bg-soft);
+  flex-shrink: 0;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb-empty {
+  background: transparent;
 }
 
 .item a:hover { opacity: 0.65; }
@@ -259,10 +283,13 @@ function fmt(date) {
   font-variant-numeric: tabular-nums;
 }
 
-@media (max-width: 600px) {
-  .item a {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
+@media (max-width: 720px) {
+  .item a { grid-template-columns: 100px 1fr; }
+  .thumb { display: none; }
+}
+
+@media (max-width: 480px) {
+  .item a { grid-template-columns: 1fr; gap: 6px; }
+  .item time { font-size: 12px; }
 }
 </style>

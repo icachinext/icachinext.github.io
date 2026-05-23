@@ -10,6 +10,7 @@ source: "https://mp.weixin.qq.com/s/rcjL0uiGGMf6poRS59TqrA"
 lang: zh
 ---
 
+<NewsCover />
 **ICHEC 2026**
 
 人机交互会议论文短文征稿启事

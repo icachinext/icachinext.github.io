@@ -6,6 +6,7 @@ import Layout from './Layout.vue'
 
 import BoardMembers from '../../../components/BoardMembers.vue'
 import AboutGallery from '../../../components/AboutGallery.vue'
+import NewsCover from '../../../components/NewsCover.vue'
 import BoardWithHistory from '../../../components/BoardWithHistory.vue'
 import NewsList from '../../../components/NewsList.vue'
 import ConferenceGrid from '../../../components/ConferenceGrid.vue'
@@ -21,6 +22,7 @@ const theme: Theme = {
   enhanceApp({ app }) {
     app.component('BoardMembers', BoardMembers)
     app.component('AboutGallery', AboutGallery)
+    app.component('NewsCover', NewsCover)
     app.component('BoardWithHistory', BoardWithHistory)
     app.component('NewsList', NewsList)
     app.component('ConferenceGrid', ConferenceGrid)

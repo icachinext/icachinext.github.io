@@ -9,6 +9,7 @@ source: "https://mp.weixin.qq.com/s/..."
 lang: zh
 ---
 
+<NewsCover />
 正文从这里开始。删除上方 source 行如果没有原文链接。
 
 ## 字段说明
