@@ -30,21 +30,27 @@ onMounted(async () => {
 
   void logoRef.value.offsetWidth // force reflow
 
-  // T + 1000ms: logo begins sliding left to its natural position (1800ms ease)
+  // ── Animation timing ──────────────────────────────────
+  const PAUSE       = 600   // ms  initial hold before logo moves
+  const SLIDE       = 900   // ms  logo slide duration
+  const FADE        = 500   // ms  content fade-in duration
+  // ──────────────────────────────────────────────────────
+
+  // T + PAUSE: logo slides left to natural position
   setTimeout(() => {
     requestAnimationFrame(() => {
       logoRef.value.style.cssText =
-        'transform:translateX(0);transition:transform 1800ms cubic-bezier(0.25,0.46,0.45,0.94);'
+        `transform:translateX(0);transition:transform ${SLIDE}ms cubic-bezier(0.25,0.46,0.45,0.94);`
     })
-  }, 1000)
+  }, PAUSE)
 
-  // T + 2800ms (logo has just landed): all content fades in simultaneously
+  // T + PAUSE + SLIDE (logo just landed): all content fades in simultaneously
   setTimeout(() => {
     requestAnimationFrame(() => {
-      textRef.value.style.cssText = 'opacity:1;transition:opacity 700ms ease;'
-      bodyRef.value.style.cssText = 'opacity:1;transition:opacity 700ms ease;'
+      textRef.value.style.cssText = `opacity:1;transition:opacity ${FADE}ms ease;`
+      bodyRef.value.style.cssText = `opacity:1;transition:opacity ${FADE}ms ease;`
     })
-  }, 2800)
+  }, PAUSE + SLIDE)
 })
 </script>
 
@@ -67,10 +73,10 @@ onMounted(async () => {
         <p class="hero-sub">{{ hero.subtitle }}</p>
         <div class="hero-ctas">
           <a class="ic-btn" :href="hero.primaryCta.link">
-            {{ hero.primaryCta.text }} <span aria-hidden="true">→</span>
+            {{ hero.primaryCta.text }}
           </a>
           <a class="ic-btn ic-btn-primary" :href="memberLink">
-            加入我们 <span aria-hidden="true">→</span>
+            加入我们
           </a>
         </div>
       </div>
