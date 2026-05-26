@@ -13,7 +13,10 @@
     "eyebrow": "About",
     "title": "A global community for human-centered computing",
     "summary": "ICACHI was founded on May 10, 2012 in Austin, USA during the ACM CHI 2012 conference. Its board comprises 27 overseas Chinese HCI researchers active across the world, building bridges between academia, industry, and education.",
-    "more": { "text": "Learn more", "link": "/en/about" }
+    "more": {
+      "text": "Learn more",
+      "link": "/en/about"
+    }
   },
   "conferences": {
     "eyebrow": "Annual Conference",
@@ -41,11 +44,11 @@
   },
   "joinUs": {
     "text": "Join Us",
-    "link": "https://pre.icachi.org/auth/signup"
+    "link": "https://passport.icachi.org"
   },
   "memberLogin": {
     "text": "Member Login",
-    "link": "https://pre.icachi.org/auth/signup"
+    "link": "https://passport.icachi.org"
   },
   "footer": {
     "tagline": "International Chinese Association of Computer Human Interaction",
@@ -53,23 +56,44 @@
       {
         "heading": "Association",
         "links": [
-          { "text": "About Us", "link": "/en/about" },
-          { "text": "Bylaws", "link": "/en/bylaws" },
-          { "text": "Board Members", "link": "/en/about#board-members" }
+          {
+            "text": "About Us",
+            "link": "/en/about"
+          },
+          {
+            "text": "Bylaws",
+            "link": "/en/bylaws"
+          },
+          {
+            "text": "Board Members",
+            "link": "/en/about#board-members"
+          }
         ]
       },
       {
         "heading": "Content",
         "links": [
-          { "text": "News", "link": "/en/news/" },
-          { "text": "Conferences", "link": "/en/conference" },
-          { "text": "Resources", "link": "/en/resource" }
+          {
+            "text": "News",
+            "link": "/en/news/"
+          },
+          {
+            "text": "Conferences",
+            "link": "/en/conference"
+          },
+          {
+            "text": "Resources",
+            "link": "/en/resource"
+          }
         ]
       },
       {
         "heading": "Contact",
         "links": [
-          { "text": "office@icachi.org", "link": "mailto:office@icachi.org" }
+          {
+            "text": "office@icachi.org",
+            "link": "mailto:office@icachi.org"
+          }
         ],
         "text": [
           "Contact: Zhiyong Fu",
