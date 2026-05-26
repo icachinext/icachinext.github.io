@@ -35,11 +35,11 @@
   },
   "joinUs": {
     "text": "加入我们",
-    "link": "https://pre.icachi.org/auth/signup"
+    "link": "https://passport.icachi.org"
   },
   "memberLogin": {
     "text": "会员登录",
-    "link": "https://pre.icachi.org/auth/signup"
+    "link": "https://passport.icachi.org"
   },
   "footer": {
     "tagline": "International Chinese Association of Computer Human Interaction",
