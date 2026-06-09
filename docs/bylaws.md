@@ -9,7 +9,7 @@
 ### 第 1 条（名称及地址）
 
 1. 本会的名称为世界华人华侨人机交互协会（英文名 International Chinese Association of Computer Human Interaction，简称「ICACHI」）。URL 为 https://www.icachi.org
-2. 本会的总部设在加拿大。协会地址：849 Laurelwood Dr, Waterloo, ON N2V 2X6, Canada.
+2. 本会的总部设在加拿大。
     - 电话: +852 2766-7279
     - 传真: +852 2774-0842
     - 协会网址: www.icachi.org

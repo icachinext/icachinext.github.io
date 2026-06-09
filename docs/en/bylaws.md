@@ -10,7 +10,7 @@ outline: deep
 ### Article 1 — Name and Address
 
 1. The name of this association is the World Overseas Chinese Association of Computer Human Interaction (International Chinese Association of Computer Human Interaction, abbreviated "ICACHI"). URL: https://www.icachi.org
-2. The registered headquarters of the association is located in Canada. Address: 849 Laurelwood Dr, Waterloo, ON N2V 2X6, Canada.
+2. The registered headquarters of the association is located in Canada.
    - Tel: +852 2766-7279
    - Fax: +852 2774-0842
    - Website: www.icachi.org
