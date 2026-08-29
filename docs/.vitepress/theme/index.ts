@@ -9,6 +9,7 @@ import AboutGallery from '../../../components/AboutGallery.vue'
 import NewsCover from '../../../components/NewsCover.vue'
 import BoardWithHistory from '../../../components/BoardWithHistory.vue'
 import NewsList from '../../../components/NewsList.vue'
+import NewsTimeline from '../../../components/NewsTimeline.vue'
 import ConferenceGrid from '../../../components/ConferenceGrid.vue'
 import ResourceList from '../../../components/ResourceList.vue'
 import HomeHero from '../../../components/HomeHero.vue'
@@ -25,6 +26,7 @@ const theme: Theme = {
     app.component('NewsCover', NewsCover)
     app.component('BoardWithHistory', BoardWithHistory)
     app.component('NewsList', NewsList)
+    app.component('NewsTimeline', NewsTimeline)
     app.component('ConferenceGrid', ConferenceGrid)
     app.component('ResourceList', ResourceList)
     app.component('HomeHero', HomeHero)

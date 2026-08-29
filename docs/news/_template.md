@@ -3,8 +3,9 @@ title: "文章标题"
 date: YYYY-MM-DD
 description: "一句话摘要，显示在新闻列表预览中（建议 50 字以内）。"
 cover: /images/news/文件名.jpg
+thread: ichec-2026
 tags:
-  - ICHEC 2026
+  - 征稿
 source: "https://mp.weixin.qq.com/s/..."
 lang: zh
 ---
@@ -20,13 +21,15 @@ lang: zh
 | `date` | ✅ | 发布日期 `YYYY-MM-DD`，用于排序 |
 | `description` | ✅ | 列表摘要，不填则自动截取正文首段 |
 | `cover` | 可选 | 封面图，放在 `docs/public/images/news/` 下 |
+| `thread` | 可选 | 所属会议时间线的稳定标识，必须与 `data/conferences.json` 中的 `thread` 一致 |
 | `tags` | 可选 | 标签数组，用于列表筛选 |
 | `source` | 可选 | 原文链接（公众号 URL 等），存档用 |
 | `lang` | 可选 | `zh`（默认）或 `en` |
 
-## 常用 tags
+## Thread 与 tags
 
-- `ICHEC 2026` / `ICHEC 2025` …（年度会议）
+- `thread` 表示文章所属的年度会议，例如 `ichec-2026`。
+- `tags` 只表示内容类别，例如：
 - `征稿` / `获奖` / `通知` / `活动`
 
 ## 文件命名规范
