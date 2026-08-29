@@ -1,6 +1,9 @@
 [
     {
         "year": 2026,
+        "shortTitle": "ICHEC 2026",
+        "thread": "ichec-2026",
+        "timelinePinned": true,
         "title": "International Conference on Human-Engaged Computing 2026",
         "subtitle": "共融·体验·创新 / Inclusivity, Experience, Innovation",
         "location": "澳门城市大学, 澳门",
@@ -10,6 +13,8 @@
     },
     {
         "year": 2025,
+        "shortTitle": "ICHEC 2025",
+        "thread": "ichec-2025",
         "title": "International Conference on Human-Engaged Computing 2025",
         "location": "新加坡管理大学, 新加坡",
         "link": "https://ichec.icachi.org",
@@ -17,6 +22,8 @@
     },
     {
         "year": 2024,
+        "shortTitle": "Chinese CHI 2024",
+        "thread": "chinese-chi-2024",
         "title": "International Symposium of Chinese CHI 2024",
         "location": "南方科技大学, 深圳, 中国",
         "link": "https://ichec.icachi.org/24/",
@@ -24,6 +31,8 @@
     },
     {
         "year": 2023,
+        "shortTitle": "Chinese CHI 2023",
+        "thread": "chinese-chi-2023",
         "title": "International Symposium of Chinese CHI 2023",
         "location": "清华大学东南亚中心, 巴厘岛, 印度尼西亚",
         "link": "https://ichec.icachi.org/23/",
@@ -31,6 +40,8 @@
     },
     {
         "year": 2022,
+        "shortTitle": "Chinese CHI 2022",
+        "thread": "chinese-chi-2022",
         "title": "International Symposium of Chinese CHI 2022",
         "location": "广东工业大学, 广州, 中国",
         "link": "https://chchi2022.icachi.org",
@@ -38,6 +49,8 @@
     },
     {
         "year": 2021,
+        "shortTitle": "Chinese CHI 2021",
+        "thread": "chinese-chi-2021",
         "title": "International Symposium of Chinese CHI 2021",
         "location": "线上",
         "link": "https://chchi2021.icachi.org",
@@ -45,6 +58,8 @@
     },
     {
         "year": 2020,
+        "shortTitle": "Chinese CHI 2020",
+        "thread": "chinese-chi-2020",
         "title": "International Symposium of Chinese CHI 2020",
         "location": "线上",
         "link": "https://chchi2020.xrenlab.com",
@@ -52,6 +67,8 @@
     },
     {
         "year": 2019,
+        "shortTitle": "Chinese CHI 2019",
+        "thread": "chinese-chi-2019",
         "title": "International Symposium of Chinese CHI 2019",
         "location": "厦门大学, 厦门, 中国",
         "link": "https://web.archive.org/web/20191015123102/http://chchi2019.icachi.org/",
@@ -59,6 +76,8 @@
     },
     {
         "year": 2018,
+        "shortTitle": "Chinese CHI 2018",
+        "thread": "chinese-chi-2018",
         "title": "International Symposium of Chinese CHI 2018",
         "location": "蒙特利尔, 加拿大",
         "link": "https://web.archive.org/web/20180626030333/chchi2018.icachi.org/",
@@ -66,6 +85,8 @@
     },
     {
         "year": 2017,
+        "shortTitle": "Chinese CHI 2017",
+        "thread": "chinese-chi-2017",
         "title": "International Symposium of Chinese CHI 2017",
         "location": "广东工业大学, 广州, 中国",
         "link": "https://web.archive.org/web/20171117162527/http://chchi2017.icachi.org/",
@@ -73,6 +94,8 @@
     },
     {
         "year": 2016,
+        "shortTitle": "Chinese CHI 2016",
+        "thread": "chinese-chi-2016",
         "title": "International Symposium of Chinese CHI 2016",
         "location": "圣何塞, 加州, 美国",
         "link": "https://web.archive.org/web/20180131194049/chchi2016.icachi.org/",
@@ -80,6 +103,8 @@
     },
     {
         "year": 2015,
+        "shortTitle": "Chinese CHI 2015",
+        "thread": "chinese-chi-2015",
         "title": "International Symposium of Chinese CHI 2015",
         "location": "首尔, 韩国",
         "link": "https://web.archive.org/web/20181118034341/chchi2015.icachi.org/",
@@ -87,6 +112,8 @@
     },
     {
         "year": 2014,
+        "shortTitle": "Chinese CHI 2014",
+        "thread": "chinese-chi-2014",
         "title": "International Symposium of Chinese CHI 2014",
         "location": "多伦多, 加拿大",
         "link": "https://web.archive.org/web/20180319210157/chchi2014.icachi.org/",
@@ -94,6 +121,8 @@
     },
     {
         "year": 2013,
+        "shortTitle": "Chinese CHI 2013",
+        "thread": "chinese-chi-2013",
         "title": "International Symposium of Chinese CHI 2013",
         "location": "巴黎, 法国",
         "link": "https://web.archive.org/web/20140316002950/http://chchi2013.icachi.org/",
