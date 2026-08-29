@@ -1,0 +1,26 @@
+[
+    {
+        "name": "李维 Wei Li",
+        "role": "President",
+        "org": "华为加拿大研究中心",
+        "avatar": "/images/board/liwei.jpg"
+    },
+    {
+        "name": "麻晓娟 Xiaojuan Ma",
+        "role": "Vice President",
+        "org": "香港科技大学",
+        "avatar": "/images/board/maxiaojuan.png"
+    },
+    {
+        "name": "付志勇 Zhiyong Fu",
+        "role": "Vice President",
+        "org": "清华大学",
+        "avatar": "/images/board/fuzhiyong.jpg"
+    },
+    {
+        "name": "任向实 Xiangshi Ren",
+        "role": "Honorary life President",
+        "org": "高知工科大学",
+        "avatar": "/images/board/xiangshiren.png"
+    }
+]
