@@ -1,12 +1,12 @@
 <script setup>
 import { computed, ref, watch, onMounted } from 'vue'
-import { useRoute, useRouter, useData } from 'vitepress'
+import { useRoute, useData } from 'vitepress'
 import { data as allNews } from '../docs/news.data'
+import { conferenceThreads, findConferenceThread, timelinePath } from './newsThreads'
 
 const PAGE_SIZE = 10
 
 const route = useRoute()
-const router = useRouter()
 const { lang } = useData()
 const isEn = computed(() => lang.value?.startsWith('en'))
 
@@ -15,6 +15,16 @@ const localeNews = computed(() => {
   return allNews.filter(n =>
     isEn.value ? n.url.startsWith('/en/news/') : n.url.startsWith('/news/')
   )
+})
+
+const pinnedTimeline = computed(() => conferenceThreads.find(conference =>
+  conference.timelinePinned &&
+  localeNews.value.some(item => item.thread === conference.thread)
+))
+
+const pinnedItems = computed(() => {
+  if (!pinnedTimeline.value) return []
+  return localeNews.value.filter(item => item.thread === pinnedTimeline.value.thread)
 })
 
 const allTags = computed(() => {
@@ -79,10 +89,35 @@ function fmt(date) {
   const d = new Date(date)
   return isNaN(d.getTime()) ? date : d.toISOString().slice(0, 10)
 }
+
+function threadConference(thread) {
+  return findConferenceThread(thread)
+}
+
+function threadHref(thread) {
+  return timelinePath(thread, isEn.value)
+}
 </script>
 
 <template>
   <div class="news">
+    <a
+      v-if="pinnedTimeline"
+      :href="threadHref(pinnedTimeline.thread)"
+      class="pinned-timeline"
+    >
+      <div>
+        <span class="pinned-eyebrow">{{ isEn ? 'Featured timeline' : '置顶时间线' }}</span>
+        <h2>{{ pinnedTimeline.shortTitle }} Timeline</h2>
+        <p>{{ pinnedTimeline.title }}</p>
+      </div>
+      <div class="pinned-meta">
+        <span>{{ pinnedItems.length }} {{ isEn ? 'updates' : '条动态' }}</span>
+        <time v-if="pinnedItems[0]">{{ fmt(pinnedItems[0].date) }}</time>
+        <strong>{{ isEn ? 'View timeline →' : '查看时间线 →' }}</strong>
+      </div>
+    </a>
+
     <div v-if="allTags.length" class="filter-row">
       <button
         class="chip"
@@ -100,20 +135,25 @@ function fmt(date) {
 
     <ul class="list">
       <li v-for="item in pageItems" :key="item.url" class="item">
-        <a :href="item.url">
+        <div class="item-row">
           <time>{{ fmt(item.date) }}</time>
           <div class="body">
-            <h3>{{ item.title }}</h3>
+            <h3><a :href="item.url" class="article-link">{{ item.title }}</a></h3>
             <p v-if="item.excerpt" class="excerpt" v-html="item.excerpt"></p>
-            <div v-if="item.tags && item.tags.length" class="tags">
+            <div v-if="item.thread || (item.tags && item.tags.length)" class="tags">
+              <a
+                v-if="item.thread && threadConference(item.thread)"
+                :href="threadHref(item.thread)"
+                class="tag thread-tag"
+              >{{ threadConference(item.thread).shortTitle }} Timeline</a>
               <span v-for="t in item.tags" :key="t" class="tag">{{ t }}</span>
             </div>
           </div>
-          <div v-if="item.cover" class="thumb">
+          <a v-if="item.cover" :href="item.url" class="thumb" tabindex="-1" aria-hidden="true">
             <img :src="item.cover" :alt="item.title" />
-          </div>
+          </a>
           <div v-else class="thumb thumb-empty" />
-        </a>
+        </div>
       </li>
       <li v-if="!pageItems.length" class="empty">
         {{ isEn ? 'No news.' : '暂无新闻。' }}
@@ -134,6 +174,68 @@ function fmt(date) {
 
 <style scoped>
 .news { padding: 24px 0 80px; }
+
+.pinned-timeline {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: 28px 30px;
+  border: 1px solid var(--vp-c-text-1);
+  border-radius: 8px;
+  background: var(--vp-c-text-1);
+  color: var(--vp-c-bg);
+  text-decoration: none;
+  transition: opacity var(--ic-transition);
+}
+
+.pinned-timeline:hover { opacity: 0.82; }
+
+.pinned-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.65;
+  text-transform: uppercase;
+}
+
+.pinned-timeline h2 {
+  margin: 0 0 8px;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.pinned-timeline p {
+  margin: 0;
+  color: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.pinned-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.pinned-meta span,
+.pinned-meta time { opacity: 0.65; }
+
+.pinned-meta strong {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
 
 .filter-row {
   display: flex;
@@ -170,15 +272,13 @@ function fmt(date) {
 
 .item { border-bottom: 1px solid var(--ic-border); }
 
-.item a {
+.item-row {
   display: grid;
   grid-template-columns: 140px 1fr 160px;
   gap: 32px;
   padding: 24px 0;
-  text-decoration: none;
   color: inherit;
   align-items: center;
-  transition: opacity var(--ic-transition);
 }
 
 .thumb {
@@ -201,9 +301,7 @@ function fmt(date) {
   background: transparent;
 }
 
-.item a:hover { opacity: 0.65; }
-
-.item time {
+.item-row > time {
   font-size: 13px;
   color: var(--vp-c-text-3);
   font-variant-numeric: tabular-nums;
@@ -216,6 +314,14 @@ function fmt(date) {
   margin: 0 0 8px;
   color: var(--vp-c-text-1);
 }
+
+.article-link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity var(--ic-transition);
+}
+
+.article-link:hover { opacity: 0.65; }
 
 .excerpt {
   font-size: 14px;
@@ -241,6 +347,17 @@ function fmt(date) {
   border: 1px solid var(--ic-border);
   padding: 2px 8px;
   border-radius: 999px;
+}
+
+.thread-tag {
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  transition: border-color var(--ic-transition), color var(--ic-transition);
+}
+
+.thread-tag:hover {
+  border-color: var(--vp-c-text-1);
+  color: var(--vp-c-text-1);
 }
 
 .empty {
@@ -284,12 +401,14 @@ function fmt(date) {
 }
 
 @media (max-width: 720px) {
-  .item a { grid-template-columns: 100px 1fr; }
+  .item-row { grid-template-columns: 100px 1fr; }
   .thumb { display: none; }
 }
 
 @media (max-width: 480px) {
-  .item a { grid-template-columns: 1fr; gap: 6px; }
-  .item time { font-size: 12px; }
+  .pinned-timeline { flex-direction: column; padding: 24px; }
+  .pinned-meta { align-items: flex-start; }
+  .item-row { grid-template-columns: 1fr; gap: 6px; }
+  .item-row > time { font-size: 12px; }
 }
 </style>

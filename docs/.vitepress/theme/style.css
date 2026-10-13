@@ -175,7 +175,9 @@ html.dark {
    text column). VitePress default container is kept;
    only the inner content width restriction is lifted.    */
 .conf-wide .VPDoc .content,
-.conf-wide .VPDoc .content-container {
+.conf-wide .VPDoc .content-container,
+.timeline-wide .VPDoc .content,
+.timeline-wide .VPDoc .content-container {
   max-width: none !important;
   width: 100% !important;
 }

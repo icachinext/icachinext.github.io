@@ -139,8 +139,9 @@ title: "文章标题"
 date: 2024-08-15
 description: "一句话摘要，50字以内，显示在新闻列表预览中"
 cover: /images/news/文件名.jpg
+thread: ichec-2026
 tags:
-  - ICHEC 2024
+  - 征稿
 source: "https://mp.weixin.qq.com/s/..."
 lang: zh
 ---
@@ -155,6 +156,7 @@ lang: zh
 | `date` | ✅ | 发布日期 `YYYY-MM-DD` |
 | `description` | ✅ | 列表摘要，不超过 50 字 |
 | `cover` | 建议 | 封面图路径，公众号文章一般都有封面，尽量补充 |
+| `thread` | 可选 | 所属年度会议的稳定标识，必须与 `data/conferences.json` 一致 |
 | `tags` | 建议 | 分类标签，见下方列表 |
 | `source` | 可选 | 原公众号链接，存档用，没有可删掉这行 |
 | `lang` | 可选 | `zh`（默认）或 `en` |
@@ -164,12 +166,14 @@ lang: zh
 description: '2024年ICHEC：年会在北京圆满落幕'
 ```
 
-### 常用 tags
+### Thread 与常用 tags
 
 ```
-ICHEC 2026 / ICHEC 2025 / ICHEC 2024 …（年度会议）
+thread: ichec-2026（年度会议，可用值见 data/conferences.json）
 征稿 / 获奖 / 通知 / 活动
 ```
+
+`thread` 用于把同一届会议的新闻聚合到 Timeline；`tags` 仅用于新闻类别筛选。
 
 ### 封面图
 
@@ -200,6 +204,7 @@ title: "{{title}}"
 date: {{date:YYYY-MM-DD}}
 description: ""
 cover: 
+thread:
 tags:
   - 
 source: "{{url}}"

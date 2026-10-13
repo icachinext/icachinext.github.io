@@ -1,12 +1,13 @@
 import { createContentLoader } from 'vitepress'
 
-interface NewsItem {
+export interface NewsItem {
     title: string
     url: string
     date: string
     excerpt: string | undefined
     cover: string | undefined
     tags: string[]
+    thread: string | undefined
 }
 
 declare const data: NewsItem[]
@@ -28,7 +29,8 @@ export default createContentLoader(['news/*.md', 'en/news/*.md'], {
                 excerpt: frontmatter.description || frontmatter.excerpt || excerpt,
                 date: frontmatter.date || frontmatter.created,
                 cover: frontmatter.cover,
-                tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : []
+                tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [],
+                thread: frontmatter.thread
             }))
             .sort((a, b) => +new Date(b.date) - +new Date(a.date))
     }
