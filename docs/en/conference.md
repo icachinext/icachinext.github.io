@@ -6,4 +6,6 @@ aside: false
 
 # Conferences
 
+<ConferenceMap />
+
 <ConferenceGrid />

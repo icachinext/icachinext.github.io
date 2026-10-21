@@ -11,6 +11,7 @@ import BoardWithHistory from '../../../components/BoardWithHistory.vue'
 import NewsList from '../../../components/NewsList.vue'
 import NewsTimeline from '../../../components/NewsTimeline.vue'
 import ConferenceGrid from '../../../components/ConferenceGrid.vue'
+import ConferenceMap from '../../../components/ConferenceMap.vue'
 import ResourceList from '../../../components/ResourceList.vue'
 import HomeHero from '../../../components/HomeHero.vue'
 import HomeAbout from '../../../components/HomeAbout.vue'
@@ -28,6 +29,7 @@ const theme: Theme = {
     app.component('NewsList', NewsList)
     app.component('NewsTimeline', NewsTimeline)
     app.component('ConferenceGrid', ConferenceGrid)
+    app.component('ConferenceMap', ConferenceMap)
     app.component('ResourceList', ResourceList)
     app.component('HomeHero', HomeHero)
     app.component('HomeAbout', HomeAbout)
