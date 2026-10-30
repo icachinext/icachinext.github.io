@@ -138,7 +138,7 @@ docs/news/
 title: "文章标题"
 date: 2024-08-15
 description: "一句话摘要，50字以内，显示在新闻列表预览中"
-cover: /images/news/文件名.jpg
+cover: https://media.icachi.org/news/文件名.jpg
 thread: ichec-2026
 tags:
   - 征稿
@@ -155,7 +155,7 @@ lang: zh
 | `title` | ✅ | 文章标题 |
 | `date` | ✅ | 发布日期 `YYYY-MM-DD` |
 | `description` | ✅ | 列表摘要，不超过 50 字 |
-| `cover` | 建议 | 封面图路径，公众号文章一般都有封面，尽量补充 |
+| `cover` | 建议 | 封面图完整地址。图片上传到 R2 的 `news/`，不要提交进 Git 仓库 |
 | `thread` | 可选 | 所属年度会议的稳定标识，必须与 `data/conferences.json` 一致 |
 | `tags` | 建议 | 分类标签，见下方列表 |
 | `source` | 可选 | 原公众号链接，存档用，没有可删掉这行 |
@@ -179,9 +179,11 @@ thread: ichec-2026（年度会议，可用值见 data/conferences.json）
 
 封面图**尽量提供**——公众号文章都有封面，如有原图请一并上传。
 
-- 图片放在 `docs/public/images/news/` 目录
+- 上传到 Cloudflare R2 存储桶 `icachi-media`，对象键为 `news/文件名.jpg`
+- 页面地址是 `https://media.icachi.org/news/文件名.jpg`
 - 文件名与文章 slug 对应，如 `ichec2024-award.jpg`
 - 建议宽度至少 800px，比例 3:2
+- 不要把公众号配图提交进 Git 仓库。logo、理事会头像、会议海报仍放在 `docs/public/images/`
 
 ---
 
@@ -253,10 +255,10 @@ lang: zh
 
 **上传封面图**
 
-1. 进入 `docs/public/images/news/` 目录
-2. 点击 **Add file → Upload files**
-3. 上传图片文件
-4. 确保文章 frontmatter 中的 `cover` 路径与文件名一致
+1. 把图片放到本地的 `docs/public/news/`（这个目录只用于上传，不要提交图片）
+2. 在仓库根目录运行 `bash scripts/upload-news-media.sh`
+3. 浏览器打开 `https://media.icachi.org/news/文件名.jpg`，确认能直接看到图片
+4. 文章 frontmatter 的 `cover` 填写这个完整地址
 
 ---
 

@@ -67,6 +67,7 @@ npm run docs:preview
 
 - JSON 必须保持有效；字段名称和现有对象形状一致，不要为缺失信息编造值。
 - `docs/public/` 内资源在页面中以根路径引用，例如文件 `docs/public/images/board/name.jpg` 对应 `/images/board/name.jpg`。
+- 新闻封面和以后的公众号配图放在 R2 存储桶 `icachi-media` 的 `news/` 前缀，页面使用 `https://media.icachi.org/news/`。这个桶通过自定义域名整桶公开，不要放入后端或未公开文件。上传脚本是 `scripts/upload-news-media.sh`。
 - 修改用户可见的共享文案、链接或导航时，检查中文和英文版本是否都需要更新。
 - 新闻 frontmatter 以 `docs/news/_template.md` 为准。至少提供 `title`、`date` 和 `description`；日期使用 `YYYY-MM-DD`。
 - 新闻列表由 `docs/news.data.ts` 在构建时加载并按日期倒序排列。中文新闻放在 `docs/news/`，英文新闻放在 `docs/en/news/`，避免依赖 `lang` 字段替代正确目录。
