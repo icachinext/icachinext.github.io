@@ -105,7 +105,8 @@ const pastGrouped = computed(() => {
         <h3 class="group-title">{{ g.role }}</h3>
         <div class="grid">
           <div v-for="m in g.members" :key="m.name" class="member">
-            <img :src="m.avatar" :alt="m.name" class="avatar" loading="lazy" />
+            <img v-if="m.avatar" :src="m.avatar" :alt="m.name" class="avatar" loading="lazy" />
+            <div v-else class="avatar avatar-fallback" aria-hidden="true">{{ m.name.trim().charAt(0) }}</div>
             <div class="info">
               <h4>{{ m.name }}</h4>
               <p>{{ m.org }}</p>
@@ -133,7 +134,8 @@ const pastGrouped = computed(() => {
           <h3 class="group-title">{{ g.role }}</h3>
           <div class="grid">
             <div v-for="m in g.members" :key="m.name" class="member">
-              <img :src="m.avatar" :alt="m.name" class="avatar" loading="lazy" />
+              <img v-if="m.avatar" :src="m.avatar" :alt="m.name" class="avatar" loading="lazy" />
+              <div v-else class="avatar avatar-fallback" aria-hidden="true">{{ m.name.trim().charAt(0) }}</div>
               <div class="info">
                 <h4>{{ m.name }}</h4>
                 <p>{{ m.org }}</p>
@@ -249,6 +251,16 @@ const pastGrouped = computed(() => {
   object-fit: cover;
   margin-bottom: 12px;
   transition: filter var(--ic-transition);
+}
+
+.avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ic-border);
+  color: var(--vp-c-text-2);
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .info h4 {

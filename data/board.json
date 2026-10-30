@@ -1,39 +1,39 @@
 [
     {
-        "name": "付志勇 Zhiyong Fu",
-        "role": "President",
-        "org": "清华大学",
-        "avatar": "/images/board/fuzhiyong.jpg"
-    },
-    {
-        "name": "麻晓娟 Xiaojuan Ma",
-        "role": "Executive Vice President",
-        "org": "香港科技大学",
-        "avatar": "/images/board/maxiaojuan.png"
-    },
-    {
         "name": "胡军 Jun Hu",
-        "role": "Vice President ",
-        "org": "埃因霍芬理工大学",
+        "role": "President",
+        "org": "埃因霍温理工大学",
         "avatar": "/images/board/hujun.jpg"
     },
     {
-        "name": "姚俊峰 Junfeng Yao",
-        "role": "Vice President ",
-        "org": "厦门大学",
-        "avatar": "/images/board/yaojunfeng.jpeg"
+        "name": "刘灿 Can Liu",
+        "role": "Executive Vice President",
+        "org": "香港城市大学",
+        "avatar": "/images/board/liucan.jpg"
     },
     {
-        "name": "米海鹏 Haipeng Mi",
+        "name": "王韫 Yun Wang",
         "role": "Vice President",
-        "org": "清华大学",
-        "avatar": "/images/board/mihaipeng.jpg"
+        "org": "北京航空航天大学",
+        "avatar": "/images/board/wangyun.png"
     },
     {
-        "name": "王大阔 Dakuo Wang",
+        "name": "佟馨 Xin Tong",
         "role": "Vice President",
-        "org": "东北大学",
-        "avatar": "/images/board/wangdakuo.jpg"
+        "org": "香港科技大学（广州）",
+        "avatar": "/images/board/tongxin.jpg"
+    },
+    {
+        "name": "袁晓君 Xiaojun Yuan",
+        "role": "Vice President",
+        "org": "纽约州立大学奥尔巴尼分校",
+        "avatar": "/images/board/yuanxiaojun.png"
+    },
+    {
+        "name": "刘伟 Wei Liu",
+        "role": "Vice President",
+        "org": "澳门大学",
+        "avatar": "/images/board/liuwei.jpg"
     },
     {
         "name": "赵健 Jian Zhao",
@@ -42,124 +42,22 @@
         "avatar": "/images/board/zhaojian.jpg"
     },
     {
-        "name": "涂华伟 Huawei Tu",
+        "name": "王晨 Chen Wang",
         "role": "Secretary General",
-        "org": "拉筹伯大学",
-        "avatar": "/images/board/tuhuawei.jpeg"
-    },
-    {
-        "name": "夏晴 Qing Xia",
-        "role": "Deputy Secretary General",
-        "org": "鲁迅美术学院",
-        "avatar": "/images/board/xiaqing.jpg"
-    },
-    {
-        "name": "安鹏铖 Pengcheng An",
-        "role": "Deputy Secretary General",
-        "org": "南方科技大学",
-        "avatar": "/images/board/anpengcheng.jpeg"
-    },
-    {
-        "name": "王建民 Jianmin Wang",
-        "role": "Board Member",
-        "org": "同济大学",
-        "avatar": "/images/board/wangjianmin.jpg"
-    },
-    {
-        "name": "王韫 Yun Wang",
-        "role": "Board Member",
-        "org": "北京航空航天大学",
-        "avatar": "/images/board/wangyun.png"
-    },
-    {
-        "name": "付心仪 Xinyi Fu",
-        "role": "Board Member",
-        "org": "清华大学",
-        "avatar": "/images/board/fuxinyi.jpeg"
-    },
-    {
-        "name": "冯桂焕 Guihuan Feng",
-        "role": "Board Member",
-        "org": "南京大学",
-        "avatar": "/images/board/guihuanfeng.jpeg"
+        "org": "上海工程技术大学",
+        "avatar": "/images/board/wangchen.jpg"
     },
     {
         "name": "冯媛 Yuan Feng",
-        "role": "Board Member",
+        "role": "Deputy Secretary General",
         "org": "西北工业大学",
         "avatar": "/images/board/fengyuan.jpg"
     },
     {
-        "name": "刘伟 Wei Liu",
-        "role": "Board Member",
-        "org": "南方科技大学",
-        "avatar": "/images/board/liuwei.jpg"
-    },
-    {
-        "name": "刘灿 Can Liu",
-        "role": "Board Member",
-        "org": "香港城市大学",
-        "avatar": "/images/board/liucan.jpg"
-    },
-    {
-        "name": "刘冠宏 Guanhong Liu",
-        "role": "Board Member",
-        "org": "同济大学",
-        "avatar": "/images/board/liuguanhong.jpg"
-    },
-    {
-        "name": "孙华彤 Huatong Sun",
-        "role": "Board Member",
-        "org": "华盛顿大学",
-        "avatar": "/images/board/sunhuatong.jpg"
-    },
-    {
-        "name": "纪毅 Yi Ji",
-        "role": "Board Member",
-        "org": "广东工业大学",
-        "avatar": "/images/board/jiyi.jpg"
-    },
-    {
-        "name": "佘莹莹 Yingying She",
-        "role": "Board Member",
-        "org": "厦门大学",
-        "avatar": "/images/board/sheyingying.jpeg"
-    },
-    {
-        "name": "张为威 Weiwei Zhang",
-        "role": "Board Member",
-        "org": "北京邮电大学",
-        "avatar": "/images/board/zhangweiwei.jpg"
-    },
-    {
-        "name": "李静雅 Jingya Li",
-        "role": "Board Member",
-        "org": "北京交通大学",
-        "avatar": "/images/board/lijingya.jpeg"
-    },
-    {
-        "name": "范明明 Mingming Fan",
-        "role": "Board Member",
-        "org": "香港科技大学",
-        "avatar": "/images/board/fanmingming.png"
-    },
-    {
-        "name": "喻纯 Chun Yu",
-        "role": "Board Member",
-        "org": "清华大学",
-        "avatar": "/images/board/yuchun.jpeg"
-    },
-    {
-        "name": "袁晓君 Xiaojun Yuan",
-        "role": "Board Member",
-        "org": "纽约州立大学阿尔巴尼",
-        "avatar": "/images/board/yuanxiaojun.png"
-    },
-    {
-        "name": "王晨 Chen Wang",
+        "name": "安鹏铖 Pengcheng An",
         "role": "President of Youth Committee",
-        "org": "高知工科大学",
-        "avatar": "/images/board/wangchen.jpg"
+        "org": "南方科技大学",
+        "avatar": "/images/board/anpengcheng.jpeg"
     },
     {
         "name": "朱琳 Lin Zhu",
@@ -168,10 +66,122 @@
         "avatar": "/images/board/zhulin.jpg"
     },
     {
-        "name": "徐雨欣 Yuxin Xu",
+        "name": "夏晴 Qing Xia",
         "role": "VP of Youth Committee",
-        "org": "多伦多大学",
-        "avatar": "/images/board/xuyuxin.jpeg"
+        "org": "鲁迅美术学院",
+        "avatar": "/images/board/xiaqing.jpg"
+    },
+    {
+        "name": "李静雅 Jingya Li",
+        "role": "Supervisor",
+        "org": "北京交通大学",
+        "avatar": "/images/board/lijingya.jpeg"
+    },
+    {
+        "name": "米海鹏 Haipeng Mi",
+        "role": "Supervisor",
+        "org": "清华大学",
+        "avatar": "/images/board/mihaipeng.jpg"
+    },
+    {
+        "name": "任向实 Xiangshi Ren",
+        "role": "Honorary life President",
+        "org": "高知工科大学",
+        "avatar": "/images/board/xiangshiren.png"
+    },
+    {
+        "name": "李维 Wei Li",
+        "role": "Honorary life President",
+        "org": "华为",
+        "avatar": "/images/board/liwei.jpg"
+    },
+    {
+        "name": "付志勇 Zhiyong Fu",
+        "role": "Honorary life President",
+        "org": "清华大学",
+        "avatar": "/images/board/fuzhiyong.jpg"
+    },
+    {
+        "name": "范明明 Mingming Fan",
+        "role": "Board Member",
+        "org": "香港科技大学（广州）",
+        "avatar": "/images/board/fanmingming.png"
+    },
+    {
+        "name": "冯桂焕 Guihuan Feng",
+        "role": "Board Member",
+        "org": "南京大学",
+        "avatar": "/images/board/guihuanfeng.jpeg"
+    },
+    {
+        "name": "付心仪 Xinyi Fu",
+        "role": "Board Member",
+        "org": "清华大学",
+        "avatar": "/images/board/fuxinyi.jpeg"
+    },
+    {
+        "name": "高博宇 Boyu Gao",
+        "role": "Board Member",
+        "org": "暨南大学",
+        "avatar": "/images/board/gaoboyu.jpg"
+    },
+    {
+        "name": "纪毅 Yi Ji",
+        "role": "Board Member",
+        "org": "广东工业大学",
+        "avatar": "/images/board/jiyi.jpg"
+    },
+    {
+        "name": "李萌 Meng Li",
+        "role": "Board Member",
+        "org": "北京邮电大学"
+    },
+    {
+        "name": "佘莹莹 Yingying She",
+        "role": "Board Member",
+        "org": "厦门大学",
+        "avatar": "/images/board/sheyingying.jpeg"
+    },
+    {
+        "name": "孙华彤 Huatong Sun",
+        "role": "Board Member",
+        "org": "华盛顿大学塔科马分校",
+        "avatar": "/images/board/sunhuatong.jpg"
+    },
+    {
+        "name": "涂华伟 Huawei Tu",
+        "role": "Board Member",
+        "org": "拉筹伯大学",
+        "avatar": "/images/board/tuhuawei.jpeg"
+    },
+    {
+        "name": "王大阔 Dakuo Wang",
+        "role": "Board Member",
+        "org": "美国东北大学",
+        "avatar": "/images/board/wangdakuo.jpg"
+    },
+    {
+        "name": "王建民 Jianmin Wang",
+        "role": "Board Member",
+        "org": "同济大学",
+        "avatar": "/images/board/wangjianmin.jpg"
+    },
+    {
+        "name": "姚远 Yuan Yao",
+        "role": "Board Member",
+        "org": "北京交通大学",
+        "avatar": "/images/board/yaoyuan.jpg"
+    },
+    {
+        "name": "张为威 Weiwei Zhang",
+        "role": "Board Member",
+        "org": "北京邮电大学",
+        "avatar": "/images/board/zhangweiwei.jpg"
+    },
+    {
+        "name": "蔡奕辉 Yihui Cai",
+        "role": "Student Board Member",
+        "org": "清华大学"
     },
     {
         "name": "金彤彤 Tongtong Jin",
@@ -186,27 +196,14 @@
         "avatar": "/images/board/tangxin.jpg"
     },
     {
-        "name": "高博宇 Boyu Gao",
-        "role": "Supervisor",
-        "org": "暨南大学",
-        "avatar": "/images/board/gaoboyu.jpg"
+        "name": "徐雨欣 Yuxin Xu",
+        "role": "Student Board Member",
+        "org": "麦吉尔大学",
+        "avatar": "/images/board/xuyuxin.jpeg"
     },
     {
-        "name": "林琳 Lin Lin",
-        "role": "Supervisor",
-        "org": "厦门大学",
-        "avatar": "/images/board/linlin.jpg"
-    },
-    {
-        "name": "任向实 Xiangshi Ren",
-        "role": "Honorary life President ",
-        "org": "高知工科大学",
-        "avatar": "/images/board/xiangshiren.png"
-    },
-    {
-        "name": "李维 Wei Li",
-        "role": "Honorary life President ",
-        "org": "华为",
-        "avatar": "/images/board/liwei.jpg"
+        "name": "张鹤 He Zhang",
+        "role": "Student Board Member",
+        "org": "宾夕法尼亚州立大学"
     }
 ]
