@@ -35,6 +35,7 @@ const allTags = computed(() => {
 
 const activeTag = ref('')
 const currentPage = ref(1)
+const jumpPage = ref(1)
 
 function syncFromUrl() {
   const search = typeof window !== 'undefined' ? window.location.search : ''
@@ -42,10 +43,14 @@ function syncFromUrl() {
   activeTag.value = params.get('tag') || ''
   const p = parseInt(params.get('page') || '1', 10)
   currentPage.value = isNaN(p) || p < 1 ? 1 : p
+  jumpPage.value = currentPage.value
 }
 
 onMounted(syncFromUrl)
 watch(() => route.path, syncFromUrl)
+watch(currentPage, (page) => {
+  jumpPage.value = page
+})
 
 function pushUrl() {
   if (typeof window === 'undefined') return
@@ -78,10 +83,25 @@ function setTag(t) {
 function goto(p) {
   if (p < 1 || p > totalPages.value) return
   currentPage.value = p
+  jumpPage.value = p
   pushUrl()
   if (typeof window !== 'undefined') {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+}
+
+function jump() {
+  const raw = Number(jumpPage.value)
+  if (!Number.isFinite(raw)) {
+    jumpPage.value = currentPage.value
+    return
+  }
+  const page = Math.min(totalPages.value, Math.max(1, Math.round(raw)))
+  if (page === currentPage.value) {
+    jumpPage.value = page
+    return
+  }
+  goto(page)
 }
 
 function fmt(date) {
@@ -160,11 +180,21 @@ function threadHref(thread) {
       </li>
     </ul>
 
-    <nav v-if="totalPages > 1" class="pager">
+    <nav v-if="totalPages > 1" class="pager" :aria-label="isEn ? 'Pagination' : '分页'">
       <button class="page-btn" :disabled="currentPage === 1" @click="goto(currentPage - 1)">
         {{ isEn ? 'Previous' : '上一页' }}
       </button>
-      <span class="page-info">{{ currentPage }} / {{ totalPages }}</span>
+      <form class="page-jump" @submit.prevent="jump">
+        <input
+          v-model="jumpPage"
+          class="page-input"
+          type="text"
+          inputmode="numeric"
+          :aria-label="isEn ? `Page number, 1 to ${totalPages}` : `页码，1 到 ${totalPages}`"
+        />
+        <span class="page-info">/ {{ totalPages }}</span>
+        <button class="page-btn" type="submit">{{ isEn ? 'Go' : '跳转' }}</button>
+      </form>
       <button class="page-btn" :disabled="currentPage === totalPages" @click="goto(currentPage + 1)">
         {{ isEn ? 'Next' : '下一页' }}
       </button>
@@ -186,10 +216,13 @@ function threadHref(thread) {
   background: var(--vp-c-text-1);
   color: var(--vp-c-bg);
   text-decoration: none;
-  transition: opacity var(--ic-transition);
+  transition: background-color var(--ic-transition);
 }
 
-.pinned-timeline:hover { opacity: 0.82; }
+.pinned-timeline:hover {
+  background: color-mix(in srgb, var(--vp-c-text-1) 88%, var(--vp-c-bg));
+  color: var(--vp-c-bg);
+}
 
 .pinned-eyebrow {
   display: block;
@@ -370,8 +403,34 @@ function threadHref(thread) {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 48px;
+}
+
+.page-jump {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.page-input {
+  width: 56px;
+  padding: 8px 0;
+  border: 1px solid var(--ic-border);
+  border-radius: 999px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font: inherit;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.page-input:focus {
+  outline: none;
+  border-color: var(--vp-c-text-1);
 }
 
 .page-btn {
