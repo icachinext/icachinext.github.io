@@ -6,8 +6,15 @@ import boardData from '../data/board.json'
 // ── Role display order ───────────────────────────────────
 const ROLE_ORDER = [
   'President',
+  'Honorary President',
   'Executive Vice President',
   'Vice President',
+  'Secretariat',
+  'Bylaws Committee',
+  'Academic Exchange Committee',
+  'Platform Committee',
+  'Outreach and Fundraising Committee',
+  'Member Services Committee',
   'Secretary General',
   'Deputy Secretary General',
   'Board Member',

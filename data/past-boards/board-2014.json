@@ -6,20 +6,167 @@
         "avatar": "/images/board/xiangshiren.png"
     },
     {
+        "name": "翟树民 Shumin Zhai",
+        "role": "Honorary President",
+        "org": "谷歌"
+    },
+    {
+        "name": "张虹 Hong Z. Tan",
+        "role": "Executive Vice President",
+        "org": "普渡大学 / 微软亚洲研究院"
+    },
+    {
+        "name": "张苹 Ping Zhang",
+        "role": "Vice President",
+        "org": "雪城大学"
+    },
+    {
+        "name": "杨耘 Yun Yang",
+        "role": "Vice President",
+        "org": "斯威本科技大学"
+    },
+    {
+        "name": "张小龙 Xiaolong Zhang",
+        "role": "Vice President",
+        "org": "宾夕法尼亚州立大学"
+    },
+    {
+        "name": "Xiaowen Fang",
+        "role": "Vice President",
+        "org": "德保罗大学"
+    },
+    {
+        "name": "杜本麟 Henry B.L. Duh",
+        "role": "Vice President",
+        "org": "新加坡国立大学"
+    },
+    {
+        "name": "李维 Wei Li",
+        "role": "Vice President",
+        "org": "Autodesk 研究院",
+        "avatar": "/images/board/liwei.jpg"
+    },
+    {
+        "name": "Jingtao Wang",
+        "role": "Secretariat",
+        "org": "匹兹堡大学"
+    },
+    {
+        "name": "Yang Wang",
+        "role": "Secretariat",
+        "org": "雪城大学"
+    },
+    {
+        "name": "Yunan Chen",
+        "role": "Secretariat",
+        "org": "加州大学尔湾分校"
+    },
+    {
+        "name": "毕小俊 Xiaojun Bi",
+        "role": "Secretariat",
+        "org": "谷歌"
+    },
+    {
         "name": "麻晓娟 Xiaojuan Ma",
-        "role": "Secretary General",
-        "org": "香港科技大学",
+        "role": "Secretariat",
+        "org": "卡内基梅隆大学",
         "avatar": "/images/board/maxiaojuan.png"
     },
     {
-        "name": "付志勇 Zhiyong Fu",
-        "role": "Board Member",
-        "org": "清华大学",
-        "avatar": "/images/board/fuzhiyong.jpg"
+        "name": "孙铭会 Minghui Sun",
+        "role": "Secretariat",
+        "org": "吉林大学"
     },
     {
-        "name": "王浩全 Hao-Chuan Wang",
-        "role": "Board Member",
-        "org": "台湾清华大学"
+        "name": "Dingyun Zhu",
+        "role": "Secretariat",
+        "org": "澳大利亚国立大学"
+    },
+    {
+        "name": "梁海宁 Hai-Ning Liang",
+        "role": "Secretariat",
+        "org": "西交利物浦大学"
+    },
+    {
+        "name": "Bin Zhu",
+        "role": "Secretariat",
+        "org": "瑞典皇家理工学院"
+    },
+    {
+        "name": "涂华伟 Huawei Tu",
+        "role": "Secretariat",
+        "org": "斯旺西大学",
+        "avatar": "/images/board/tuhuawei.jpeg"
+    },
+    {
+        "name": "邓志刚 Zhigang Deng",
+        "role": "Bylaws Committee",
+        "org": "休斯顿大学"
+    },
+    {
+        "name": "曹翔 Xiang Cao",
+        "role": "Bylaws Committee",
+        "org": "联想研究院"
+    },
+    {
+        "name": "赵盛东 Shengdong Zhao",
+        "role": "Academic Exchange Committee",
+        "org": "新加坡国立大学"
+    },
+    {
+        "name": "陈彦仰 Mike Chen",
+        "role": "Academic Exchange Committee",
+        "org": "台湾大学"
+    },
+    {
+        "name": "Qiping Zhang",
+        "role": "Platform Committee",
+        "org": "长岛大学"
+    },
+    {
+        "name": "Huahai Yang",
+        "role": "Platform Committee",
+        "org": "IBM 研究院"
+    },
+    {
+        "name": "Jun Xiao",
+        "role": "Outreach and Fundraising Committee",
+        "org": "3M"
+    },
+    {
+        "name": "王茜莺 Qianying Wang",
+        "role": "Outreach and Fundraising Committee",
+        "org": "联想用户研究中心"
+    },
+    {
+        "name": "廖春元 Chunyuan Liao",
+        "role": "Member Services Committee",
+        "org": "富士施乐帕洛阿尔托实验室"
+    },
+    {
+        "name": "栗阳 Yang Li",
+        "role": "Member Services Committee",
+        "org": "谷歌研究院"
+    },
+    {
+        "name": "Yuechuan She",
+        "role": "Member Services Committee",
+        "org": "Facebook"
+    },
+    {
+        "name": "Diana Yifan Xu",
+        "role": "Member Services Committee",
+        "org": "中央兰开夏大学"
+    },
+    {
+        "name": "袁晓君 Xiaojun Yuan",
+        "role": "Supervisor",
+        "org": "纽约州立大学奥尔巴尼分校",
+        "avatar": "/images/board/yuanxiaojun.png"
+    },
+    {
+        "name": "Gong Zhang",
+        "role": "Supervisor",
+        "org": "华为诺亚方舟实验室"
     }
 ]

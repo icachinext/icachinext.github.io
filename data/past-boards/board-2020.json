@@ -12,64 +12,10 @@
         "avatar": "/images/board/maxiaojuan.png"
     },
     {
-        "name": "涂华伟 Huawei Tu",
-        "role": "Secretary General",
-        "org": "拉筹伯大学",
-        "avatar": "/images/board/tuhuawei.jpeg"
-    },
-    {
-        "name": "赵健 Jian Zhao",
-        "role": "Deputy Secretary General",
-        "org": "滑铁卢大学",
-        "avatar": "/images/board/zhaojian.jpg"
-    },
-    {
-        "name": "姚俊峰 Junfeng Yao",
-        "role": "Board Member",
-        "org": "厦门大学",
-        "avatar": "/images/board/yaojunfeng.jpeg"
-    },
-    {
-        "name": "袁晓君 Xiaojun Yuan",
-        "role": "Board Member",
-        "org": "纽约州立大学奥尔巴尼分校",
-        "avatar": "/images/board/yuanxiaojun.png"
-    },
-    {
-        "name": "王建民 Jianmin Wang",
-        "role": "Board Member",
-        "org": "同济大学",
-        "avatar": "/images/board/wangjianmin.jpg"
-    },
-    {
         "name": "胡军 Jun Hu",
         "role": "Board Member",
         "org": "埃因霍芬理工大学",
         "avatar": "/images/board/hujun.jpg"
-    },
-    {
-        "name": "刘伟 Wei Liu",
-        "role": "Board Member",
-        "org": "北京师范大学",
-        "avatar": "/images/board/liuwei.jpg"
-    },
-    {
-        "name": "王大阔 Dakuo Wang",
-        "role": "Board Member",
-        "org": "IBM研究院",
-        "avatar": "/images/board/wangdakuo.jpg"
-    },
-    {
-        "name": "冯桂焕 Guihuan Feng",
-        "role": "Board Member",
-        "org": "南京大学",
-        "avatar": "/images/board/guihuanfeng.jpeg"
-    },
-    {
-        "name": "孙华彤 Huatong Sun",
-        "role": "Board Member",
-        "org": "华盛顿大学塔科马分校",
-        "avatar": "/images/board/sunhuatong.jpg"
     },
     {
         "name": "米海鹏 Haipeng Mi",
@@ -78,10 +24,51 @@
         "avatar": "/images/board/mihaipeng.jpg"
     },
     {
-        "name": "喻纯 Chun Yu",
+        "name": "王大阔 Dakuo Wang",
         "role": "Board Member",
-        "org": "清华大学",
-        "avatar": "/images/board/yuchun.jpeg"
+        "org": "东北大学",
+        "avatar": "/images/board/wangdakuo.jpg"
+    },
+    {
+        "name": "赵健 Jian Zhao",
+        "role": "Board Member",
+        "org": "滑铁卢大学",
+        "avatar": "/images/board/zhaojian.jpg"
+    },
+    {
+        "name": "涂华伟 Huawei Tu",
+        "role": "Secretary General",
+        "org": "拉筹伯大学",
+        "avatar": "/images/board/tuhuawei.jpeg"
+    },
+    {
+        "name": "夏晴 Qing Xia",
+        "role": "VP of Youth Committee",
+        "org": "鲁迅美术学院",
+        "avatar": "/images/board/xiaqing.jpg"
+    },
+    {
+        "name": "毕涛 Tao Bi",
+        "role": "VP of Youth Committee",
+        "org": "伦敦大学学院"
+    },
+    {
+        "name": "王建民 Jianmin Wang",
+        "role": "Board Member",
+        "org": "同济大学",
+        "avatar": "/images/board/wangjianmin.jpg"
+    },
+    {
+        "name": "刘伟 Wei Liu",
+        "role": "Board Member",
+        "org": "北京师范大学",
+        "avatar": "/images/board/liuwei.jpg"
+    },
+    {
+        "name": "孙华彤 Huatong Sun",
+        "role": "Board Member",
+        "org": "华盛顿大学",
+        "avatar": "/images/board/sunhuatong.jpg"
     },
     {
         "name": "纪毅 Yi Ji",
@@ -90,28 +77,28 @@
         "avatar": "/images/board/jiyi.jpg"
     },
     {
-        "name": "刘灿 Can Liu",
+        "name": "喻纯 Chun Yu",
         "role": "Board Member",
-        "org": "香港城市大学",
-        "avatar": "/images/board/liucan.jpg"
+        "org": "清华大学",
+        "avatar": "/images/board/yuchun.jpeg"
     },
     {
-        "name": "高博宇 Boyu Gao",
+        "name": "袁晓君 Xiaojun Yuan",
         "role": "Board Member",
-        "org": "暨南大学",
-        "avatar": "/images/board/gaoboyu.jpg"
+        "org": "纽约州立大学奥尔巴尼",
+        "avatar": "/images/board/yuanxiaojun.png"
+    },
+    {
+        "name": "冯桂焕 Guihuan Feng",
+        "role": "Board Member",
+        "org": "南京大学",
+        "avatar": "/images/board/guihuanfeng.jpeg"
     },
     {
         "name": "王晨 Chen Wang",
         "role": "President of Youth Committee",
         "org": "高知工科大学",
         "avatar": "/images/board/wangchen.jpg"
-    },
-    {
-        "name": "佘莹莹 Yingying She",
-        "role": "Supervisor",
-        "org": "厦门大学",
-        "avatar": "/images/board/sheyingying.jpeg"
     },
     {
         "name": "任向实 Xiangshi Ren",
