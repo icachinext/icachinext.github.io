@@ -1,7 +1,6 @@
 ---
 title: News
+layout: home
 ---
-
-# News
 
 <NewsList />
