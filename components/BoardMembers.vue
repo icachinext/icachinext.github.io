@@ -1,6 +1,8 @@
 <script setup>
 import { computed } from 'vue'
+import { useData } from 'vitepress'
 import boardData from '../data/board.json'
+import { orgLabel } from './orgEn'
 
 const ROLE_ORDER = [
   'President',
@@ -22,6 +24,8 @@ const ROLE_ORDER = [
   'Supervisor',
   'Honorary life President'
 ]
+
+const { lang } = useData()
 
 function normalizeRole(r) {
   return (r || '').trim()
@@ -50,7 +54,7 @@ const grouped = computed(() => {
           <div v-else class="avatar avatar-fallback" aria-hidden="true">{{ m.name.trim().charAt(0) }}</div>
           <div class="info">
             <h4>{{ m.name }}</h4>
-            <p>{{ m.org }}</p>
+            <p>{{ orgLabel(m.org, lang) }}</p>
           </div>
         </div>
       </div>
