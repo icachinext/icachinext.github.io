@@ -8,12 +8,14 @@
     {
         "name": "张虹 Hong Z. Tan",
         "role": "Executive Vice President",
-        "org": "普渡大学 / 微软亚洲研究院"
+        "org": "普渡大学 / 微软亚洲研究院",
+        "avatar": "/images/board/hongztan.jpg"
     },
     {
         "name": "张苹 Ping Zhang",
         "role": "Vice President",
-        "org": "雪城大学"
+        "org": "雪城大学",
+        "avatar": "/images/board/pingzhang.jpg"
     },
     {
         "name": "杨耘 Yun Yang",
@@ -28,12 +30,14 @@
     {
         "name": "Xiaowen Fang",
         "role": "Vice President",
-        "org": "德保罗大学"
+        "org": "德保罗大学",
+        "avatar": "/images/board/xiaowenfang.jpg"
     },
     {
         "name": "杜本麟 Henry B.L. Duh",
         "role": "Vice President",
-        "org": "新加坡国立大学"
+        "org": "新加坡国立大学",
+        "avatar": "/images/board/henryduh.jpg"
     },
     {
         "name": "李维 Wei Li",
@@ -54,12 +58,14 @@
     {
         "name": "Yunan Chen",
         "role": "Secretariat",
-        "org": "加州大学尔湾分校"
+        "org": "加州大学尔湾分校",
+        "avatar": "/images/board/yunanchen.jpg"
     },
     {
         "name": "毕小俊 Xiaojun Bi",
         "role": "Secretariat",
-        "org": "谷歌"
+        "org": "谷歌",
+        "avatar": "/images/board/xiaojunbi.png"
     },
     {
         "name": "麻晓娟 Xiaojuan Ma",
@@ -96,7 +102,8 @@
     {
         "name": "邓志刚 Zhigang Deng",
         "role": "Bylaws Committee",
-        "org": "休斯顿大学"
+        "org": "休斯顿大学",
+        "avatar": "/images/board/zhigangdeng.jpg"
     },
     {
         "name": "曹翔 Xiang Cao",
@@ -106,7 +113,8 @@
     {
         "name": "赵盛东 Shengdong Zhao",
         "role": "Academic Exchange Committee",
-        "org": "新加坡国立大学"
+        "org": "新加坡国立大学",
+        "avatar": "/images/board/shengdongzhao.png"
     },
     {
         "name": "陈彦仰 Mike Chen",

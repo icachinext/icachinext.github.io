@@ -8,7 +8,8 @@
     {
         "name": "杜本麟 Henry Duh",
         "role": "Executive Vice President",
-        "org": "塔斯马尼亚大学"
+        "org": "塔斯马尼亚大学",
+        "avatar": "/images/board/henryduh.jpg"
     },
     {
         "name": "李维 Wei Li",
@@ -24,7 +25,8 @@
     {
         "name": "赵盛东 Shengdong Zhao",
         "role": "Executive Vice President",
-        "org": "新加坡国立大学"
+        "org": "新加坡国立大学",
+        "avatar": "/images/board/shengdongzhao.png"
     },
     {
         "name": "麻晓娟 Xiaojuan Ma",
@@ -41,7 +43,8 @@
     {
         "name": "毕小俊 Xiaojun Bi",
         "role": "Deputy Secretary General",
-        "org": "谷歌"
+        "org": "谷歌",
+        "avatar": "/images/board/xiaojunbi.png"
     },
     {
         "name": "李冠男 Guannan Li",
@@ -51,12 +54,13 @@
     {
         "name": "朱滨 Bin Zhu",
         "role": "Secretariat",
-        "org": ""
+        "org": "瑞典皇家理工学院"
     },
     {
         "name": "侯悠扬 Youyang Hou",
         "role": "Secretariat",
-        "org": ""
+        "org": "密歇根大学",
+        "avatar": "/images/board/youyanghou.png"
     },
     {
         "name": "陈忱 Chen Chen",
@@ -104,11 +108,12 @@
     {
         "name": "李韵秋 Yunqiu Li",
         "role": "Supervisor",
-        "org": ""
+        "org": "斯旺西大学"
     },
     {
         "name": "萧露 Lu Xiao",
         "role": "Supervisor",
-        "org": ""
+        "org": "西安大略大学",
+        "avatar": "/images/board/luxiao.png"
     }
 ]

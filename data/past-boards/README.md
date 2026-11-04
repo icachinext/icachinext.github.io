@@ -24,6 +24,14 @@
 - [麻晓娟 2015 年中文履历](https://cse.hkust.edu.hk/~mxj/file/cv2015_XiaojuanMa-CN.pdf)
 - [王浩全个人履历](https://www.haochuanwang.info/s/Wang-Hao-Chuan-CV-2024-08-21-0243.pdf)
 - [王浩全，台湾清华大学研究者资料](https://khub.nthu.edu.tw/researcherProfile?uuid=0921A4D3-630D-41F3-94B8-7890A69AE16B)
+- 萧露的 2014 年机构见[同期论文](https://doi.org/10.1002/asi.23079)，加入雪城大学的时间见[雪城大学信息学院 2017 年报告](https://ischool.syracuse.edu/wp-content/uploads/Syracuse_University_Biennial_Narrative_2017.pdf)。
+- 2014 届机构补录依据包括[朱滨的同期论文](https://www.apsipa.org/proceedings/2014/Data/paper/1180.pdf)、[密歇根大学侯悠扬简介](https://si.umich.edu/people/faces-umsi/faces-umsi-youyang-hou)和[李韵秋的同期论文](https://pubmed.ncbi.nlm.nih.gov/23778022/)。
+
+## 补录头像来源
+
+- 张虹、张苹、Xiaowen Fang、Yunan Chen、邓志刚、毕小俊的照片分别来自[普渡大学](https://engineering.purdue.edu/ECE/People/Faculty/ptProfile?resource_id=3022)、[雪城大学](https://ischool.syracuse.edu/ping-zhang/)、[德保罗大学](https://scholars.depaul.edu/en/persons/xiaowen-fang/)、[加州大学尔湾分校](https://publichealth.uci.edu/faculty/chen-yunan/)、[休斯顿大学个人主页](https://graphics.cs.uh.edu/zdeng/)和[石溪大学个人主页](https://www3.cs.stonybrook.edu/~xiaojun/)。
+- 萧露和侯悠扬的照片分别来自[亚利桑那州立大学](https://search.asu.edu/profile/5161367)和[密歇根大学](https://si.umich.edu/people/faces-umsi/faces-umsi-youyang-hou)。
+- 杜本麟、赵盛东、杨兴栋的照片分别来自[香港理工大学](https://www.polyu.edu.hk/sd/people/academic-staff/duh-henry/)、[香港城市大学](https://www.scm.cityu.edu.hk/en/people/zhao-shengdong)和[西蒙菲莎大学](https://www.sfu.ca/fas/computing/people/faculty/faculty-members/xingdong_yang.html)。丁向华和王浩全的照片分别来自[丁向华个人主页](https://xianghuading.github.io/)和[王浩全个人主页](https://www.haochuanwang.info/)。
 
 ## 维护规则
 
