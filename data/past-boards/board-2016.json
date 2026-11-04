@@ -35,12 +35,14 @@
     {
         "name": "丁向华 Xianghua Ding",
         "role": "Board Member",
-        "org": "复旦大学"
+        "org": "复旦大学",
+        "avatar": "/images/board/xianghuading.jpg"
     },
     {
         "name": "杜本麟 Henry Duh",
         "role": "Board Member",
-        "org": "塔斯马尼亚大学"
+        "org": "塔斯马尼亚大学",
+        "avatar": "/images/board/henryduh.jpg"
     },
     {
         "name": "付志勇 Zhiyong Fu",
@@ -68,7 +70,8 @@
     {
         "name": "王浩全 Hao-Chuan Wang",
         "role": "Board Member",
-        "org": "台湾清华大学"
+        "org": "台湾清华大学",
+        "avatar": "/images/board/haochuanwang.jpg"
     },
     {
         "name": "徐昊 Hao Xu",
@@ -84,12 +87,14 @@
     {
         "name": "赵盛东 Shengdong Zhao",
         "role": "Board Member",
-        "org": "新加坡国立大学"
+        "org": "新加坡国立大学",
+        "avatar": "/images/board/shengdongzhao.png"
     },
     {
         "name": "萧露 Lu Xiao",
         "role": "Supervisor",
-        "org": ""
+        "org": "雪城大学",
+        "avatar": "/images/board/luxiao.png"
     },
     {
         "name": "陈玉 Yu Chen",
