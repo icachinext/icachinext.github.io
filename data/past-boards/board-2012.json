@@ -6,11 +6,6 @@
         "avatar": "/images/board/xiangshiren.png"
     },
     {
-        "name": "翟树民 Shumin Zhai",
-        "role": "Honorary President",
-        "org": "谷歌"
-    },
-    {
         "name": "张虹 Hong Z. Tan",
         "role": "Executive Vice President",
         "org": "普渡大学 / 微软亚洲研究院"
@@ -54,7 +49,7 @@
     {
         "name": "Yang Wang",
         "role": "Secretariat",
-        "org": "雪城大学"
+        "org": "卡内基梅隆大学"
     },
     {
         "name": "Yunan Chen",
@@ -75,7 +70,7 @@
     {
         "name": "孙铭会 Minghui Sun",
         "role": "Secretariat",
-        "org": "吉林大学"
+        "org": "日本理化学研究所"
     },
     {
         "name": "Dingyun Zhu",
@@ -88,14 +83,14 @@
         "org": "西交利物浦大学"
     },
     {
-        "name": "Bin Zhu",
+        "name": "朱滨 Bin Zhu",
         "role": "Secretariat",
         "org": "瑞典皇家理工学院"
     },
     {
         "name": "涂华伟 Huawei Tu",
         "role": "Secretariat",
-        "org": "斯旺西大学",
+        "org": "立命馆大学",
         "avatar": "/images/board/tuhuawei.jpeg"
     },
     {
@@ -106,7 +101,7 @@
     {
         "name": "曹翔 Xiang Cao",
         "role": "Bylaws Committee",
-        "org": "联想研究院"
+        "org": "微软亚洲研究院"
     },
     {
         "name": "赵盛东 Shengdong Zhao",
@@ -124,7 +119,7 @@
         "org": "长岛大学"
     },
     {
-        "name": "Huahai Yang",
+        "name": "杨华海 Huahai Yang",
         "role": "Platform Committee",
         "org": "IBM 研究院"
     },

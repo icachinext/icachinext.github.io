@@ -7,20 +7,112 @@
     },
     {
         "name": "麻晓娟 Xiaojuan Ma",
-        "role": "Vice President",
+        "role": "Executive Vice President",
         "org": "香港科技大学",
         "avatar": "/images/board/maxiaojuan.png"
     },
     {
+        "name": "李韵秋 Yunqiu Li",
+        "role": "Secretary General",
+        "org": "BBC"
+    },
+    {
+        "name": "朱滨 Bin Zhu",
+        "role": "Secretariat",
+        "org": "瑞典皇家理工学院"
+    },
+    {
+        "name": "王大阔 Dakuo Wang",
+        "role": "Board Member",
+        "org": "IBM 沃森研究院",
+        "avatar": "/images/board/wangdakuo.jpg"
+    },
+    {
+        "name": "赵健 Jian Zhao",
+        "role": "Board Member",
+        "org": "富士施乐帕洛阿尔托实验室",
+        "avatar": "/images/board/zhaojian.jpg"
+    },
+    {
+        "name": "孙华彤 Huatong Sun",
+        "role": "Board Member",
+        "org": "华盛顿大学塔科马分校",
+        "avatar": "/images/board/sunhuatong.jpg"
+    },
+    {
+        "name": "杨兴栋 Xing-Dong Yang",
+        "role": "Board Member",
+        "org": "达特茅斯学院"
+    },
+    {
+        "name": "米海鹏 Haipeng Mi",
+        "role": "Board Member",
+        "org": "清华大学",
+        "avatar": "/images/board/mihaipeng.jpg"
+    },
+    {
+        "name": "袁晓君 Xiaojun Yuan",
+        "role": "Board Member",
+        "org": "纽约州立大学奥尔巴尼分校",
+        "avatar": "/images/board/yuanxiaojun.png"
+    },
+    {
         "name": "付志勇 Zhiyong Fu",
-        "role": "Vice President",
+        "role": "Board Member",
         "org": "清华大学",
         "avatar": "/images/board/fuzhiyong.jpg"
     },
     {
-        "name": "任向实 Xiangshi Ren",
-        "role": "Honorary life President",
-        "org": "高知工科大学",
-        "avatar": "/images/board/xiangshiren.png"
+        "name": "涂华伟 Huawei Tu",
+        "role": "Board Member",
+        "org": "南京航空航天大学",
+        "avatar": "/images/board/tuhuawei.jpeg"
+    },
+    {
+        "name": "纪毅 Yi Ji",
+        "role": "Board Member",
+        "org": "广东工业大学",
+        "avatar": "/images/board/jiyi.jpg"
+    },
+    {
+        "name": "刘力 Li Liu",
+        "role": "Board Member",
+        "org": "加州州立大学北岭分校"
+    },
+    {
+        "name": "刘伟 Wei Liu",
+        "role": "Board Member",
+        "org": "同济大学",
+        "avatar": "/images/board/liuwei.jpg"
+    },
+    {
+        "name": "王浩全 Hao-Chuan Wang",
+        "role": "Board Member",
+        "org": "台湾清华大学（新竹）"
+    },
+    {
+        "name": "赵盛东 Shengdong Zhao",
+        "role": "Board Member",
+        "org": "新加坡国立大学"
+    },
+    {
+        "name": "丁向华 Xianghua Ding",
+        "role": "Board Member",
+        "org": "复旦大学"
+    },
+    {
+        "name": "杜本麟 Henry Duh",
+        "role": "Board Member",
+        "org": "塔斯马尼亚大学"
+    },
+    {
+        "name": "萧露 Lu Xiao",
+        "role": "Supervisor",
+        "org": ""
+    },
+    {
+        "name": "陈玉 Yu Chen",
+        "role": "Supervisor",
+        "org": ""
     }
 ]
