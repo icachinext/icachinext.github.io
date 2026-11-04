@@ -2,6 +2,7 @@
 import { ref, computed, watchEffect } from 'vue'
 import { useData } from 'vitepress'
 import boardData from '../data/board.json'
+import { orgLabel } from './orgEn'
 
 // ── Role display order ───────────────────────────────────
 const ROLE_ORDER = [
@@ -116,7 +117,7 @@ const pastGrouped = computed(() => {
             <div v-else class="avatar avatar-fallback" aria-hidden="true">{{ m.name.trim().charAt(0) }}</div>
             <div class="info">
               <h4>{{ m.name }}</h4>
-              <p>{{ m.org }}</p>
+              <p>{{ orgLabel(m.org, lang) }}</p>
             </div>
           </div>
         </div>
@@ -145,7 +146,7 @@ const pastGrouped = computed(() => {
               <div v-else class="avatar avatar-fallback" aria-hidden="true">{{ m.name.trim().charAt(0) }}</div>
               <div class="info">
                 <h4>{{ m.name }}</h4>
-                <p>{{ m.org }}</p>
+                <p>{{ orgLabel(m.org, lang) }}</p>
               </div>
             </div>
           </div>
