@@ -14,12 +14,14 @@
     {
         "name": "李韵秋 Yunqiu Li",
         "role": "Secretary General",
-        "org": "BBC"
+        "org": "BBC",
+        "avatar": "/images/board/liyunqiu.jpg"
     },
     {
         "name": "朱滨 Bin Zhu",
         "role": "Secretariat",
-        "org": "瑞典皇家理工学院"
+        "org": "瑞典皇家理工学院",
+        "avatar": "/images/board/zhubin.png"
     },
     {
         "name": "王大阔 Dakuo Wang",
@@ -78,7 +80,8 @@
     {
         "name": "刘力 Li Liu",
         "role": "Board Member",
-        "org": "加州州立大学北岭分校"
+        "org": "加州州立大学北岭分校",
+        "avatar": "/images/board/liuli.jpg"
     },
     {
         "name": "刘伟 Wei Liu",

@@ -20,7 +20,8 @@
     {
         "name": "张小龙 Xiaolong Zhang",
         "role": "Executive Vice President",
-        "org": "宾夕法尼亚州立大学"
+        "org": "宾夕法尼亚州立大学",
+        "avatar": "/images/board/zhangxiaolong.jpg"
     },
     {
         "name": "赵盛东 Shengdong Zhao",
@@ -49,12 +50,14 @@
     {
         "name": "李冠男 Guannan Li",
         "role": "Secretariat",
-        "org": ""
+        "org": "",
+        "avatar": "/images/board/liguannan.jpg"
     },
     {
         "name": "朱滨 Bin Zhu",
         "role": "Secretariat",
-        "org": "瑞典皇家理工学院"
+        "org": "瑞典皇家理工学院",
+        "avatar": "/images/board/zhubin.png"
     },
     {
         "name": "侯悠扬 Youyang Hou",
@@ -70,7 +73,8 @@
     {
         "name": "杨华海 Huahai Yang",
         "role": "Board Member",
-        "org": "IBM 研究院"
+        "org": "IBM 研究院",
+        "avatar": "/images/board/yanghuahai.jpg"
     },
     {
         "name": "刘伟 Wei Liu",
@@ -87,7 +91,8 @@
     {
         "name": "刘力 Li Liu",
         "role": "Board Member",
-        "org": "犹他谷大学"
+        "org": "犹他谷大学",
+        "avatar": "/images/board/liuli.jpg"
     },
     {
         "name": "付志勇 Zhiyong Fu",
@@ -98,17 +103,20 @@
     {
         "name": "王圣铭 Sheng-Ming Wang",
         "role": "Board Member",
-        "org": "台北科技大学"
+        "org": "台北科技大学",
+        "avatar": "/images/board/wangshengming.png"
     },
     {
         "name": "廖春元 Chunyuan Liao",
         "role": "Board Member",
-        "org": "HiScene"
+        "org": "HiScene",
+        "avatar": "/images/board/liaochunyuan.jpg"
     },
     {
         "name": "李韵秋 Yunqiu Li",
         "role": "Supervisor",
-        "org": "斯旺西大学"
+        "org": "斯旺西大学",
+        "avatar": "/images/board/liyunqiu.jpg"
     },
     {
         "name": "萧露 Lu Xiao",

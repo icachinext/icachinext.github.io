@@ -14,17 +14,20 @@
     {
         "name": "李韵秋 Yunqiu Li",
         "role": "Secretary General",
-        "org": "BBC"
+        "org": "BBC",
+        "avatar": "/images/board/liyunqiu.jpg"
     },
     {
         "name": "Chaklam Silpasuwanchai",
         "role": "Deputy Secretary General",
-        "org": "高知工科大学"
+        "org": "高知工科大学",
+        "avatar": "/images/board/chaklam.png"
     },
     {
         "name": "朱滨 Bin Zhu",
         "role": "Secretariat",
-        "org": "瑞典皇家理工学院"
+        "org": "瑞典皇家理工学院",
+        "avatar": "/images/board/zhubin.png"
     },
     {
         "name": "涂华伟 Huawei Tu",
@@ -59,7 +62,8 @@
     {
         "name": "刘力 Li Liu",
         "role": "Board Member",
-        "org": "加州州立大学北岭分校"
+        "org": "加州州立大学北岭分校",
+        "avatar": "/images/board/liuli.jpg"
     },
     {
         "name": "刘伟 Wei Liu",
@@ -76,7 +80,8 @@
     {
         "name": "徐昊 Hao Xu",
         "role": "Board Member",
-        "org": "吉林大学"
+        "org": "吉林大学",
+        "avatar": "/images/board/xuhao.jpg"
     },
     {
         "name": "袁晓君 Xiaojun Yuan",
