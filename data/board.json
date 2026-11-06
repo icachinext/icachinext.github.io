@@ -182,7 +182,8 @@
     {
         "name": "蔡奕辉 Yihui Cai",
         "role": "Student Board Member",
-        "org": "清华大学"
+        "org": "清华大学",
+        "avatar": "/images/board/caiyihui.jpg"
     },
     {
         "name": "金彤彤 Tongtong Jin",
@@ -205,6 +206,7 @@
     {
         "name": "张鹤 He Zhang",
         "role": "Student Board Member",
-        "org": "宾夕法尼亚州立大学"
+        "org": "宾夕法尼亚州立大学",
+        "avatar": "/images/board/zhanghe.jpg"
     }
 ]
