@@ -56,7 +56,8 @@
     {
         "name": "Yang Wang",
         "role": "Secretariat",
-        "org": "卡内基梅隆大学"
+        "org": "卡内基梅隆大学",
+        "avatar": "/images/board/wangyang.jpg"
     },
     {
         "name": "Yunan Chen",
@@ -145,7 +146,8 @@
     {
         "name": "Jun Xiao",
         "role": "Outreach and Fundraising Committee",
-        "org": "3M"
+        "org": "3M",
+        "avatar": "/images/board/xiaojun.jpg"
     },
     {
         "name": "王茜莺 Qianying Wang",
@@ -168,7 +170,8 @@
     {
         "name": "Yuechuan She",
         "role": "Member Services Committee",
-        "org": "Facebook"
+        "org": "Facebook",
+        "avatar": "/images/board/sheyuechuan.jpg"
     },
     {
         "name": "Diana Yifan Xu",
@@ -184,6 +187,7 @@
     {
         "name": "Gong Zhang",
         "role": "Supervisor",
-        "org": "华为诺亚方舟实验室"
+        "org": "华为诺亚方舟实验室",
+        "avatar": "/images/board/zhanggong.jpg"
     }
 ]
